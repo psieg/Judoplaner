@@ -599,8 +599,10 @@ namespace UFight
                 Units.Fight.PlayerBPunish = 0;
                 Backup();
                 GoButton.Visible = true;
+                PauseButton.Visible = false;
                 PlayerALabel.Text = "";
                 PlayerBLabel.Text = "";
+                UnHold();
                 Updater(false);
                 Units.Fight.BacklinkForm.Enabled = true;
                 Units.Fight.BacklinkUpdater();

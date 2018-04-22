@@ -505,10 +505,6 @@ namespace UGroup
             PrintGameButton.Left = PrintResultButton.Left;
             SettingsButton.Left = this.Width - SettingsButton.Width - 16 - 5;
             StatsLabel.Left = this.Width - StatsLabel.Width - 16 - 5;
-            PrepareLabel.Top = this.Height - PrepareLabel.Height - 36 - 5;
-            //@ Unsupported property or method(C): 'Height'
-            //@ Unsupported property or method(C): 'Top'
-            ProgressBar.Top = this.Height - ProgressBar.Height - 36 - (5 + 2);
             // height: 9 vs labels 13	  StatsLabel.Top := Height-StatsLabel.Height-36-5;
 
         }

@@ -66,7 +66,7 @@ namespace UGroup
             // StatsLabel
             // 
             this.StatsLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.StatsLabel.Location = new System.Drawing.Point(642, 541);
+            this.StatsLabel.Location = new System.Drawing.Point(642, 540);
             this.StatsLabel.Name = "StatsLabel";
             this.StatsLabel.Size = new System.Drawing.Size(137, 13);
             this.StatsLabel.TabIndex = 0;
@@ -75,6 +75,7 @@ namespace UGroup
             // 
             // PrepareLabel
             // 
+            this.PrepareLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.PrepareLabel.Location = new System.Drawing.Point(5, 540);
             this.PrepareLabel.Name = "PrepareLabel";
             this.PrepareLabel.Size = new System.Drawing.Size(280, 13);
@@ -238,10 +239,11 @@ namespace UGroup
             // 
             // ProgressBar
             // 
-            this.ProgressBar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.ProgressBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.ProgressBar.BackColor = System.Drawing.Color.Transparent;
             this.ProgressBar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ProgressBar.Location = new System.Drawing.Point(302, 544);
+            this.ProgressBar.Location = new System.Drawing.Point(255, 543);
             this.ProgressBar.Margin = new System.Windows.Forms.Padding(2);
             this.ProgressBar.Name = "ProgressBar";
             this.ProgressBar.Size = new System.Drawing.Size(382, 10);
