@@ -164,13 +164,13 @@
     <EmbeddedResource Include="ULoad.resx">
       <DependentUpon>ULoad.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UPrint.resx">
+      <DependentUpon>UPrint.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="USettings.resx">
       <DependentUpon>USettings.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
-    <None Include="_delphi2cs.htm">
-      <SubType>Preview</SubType>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

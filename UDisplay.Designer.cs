@@ -289,8 +289,10 @@ namespace UDisplay
             // 
             // ProgressBar
             // 
-            this.ProgressBar.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.ProgressBar.BackColor = System.Drawing.Color.Transparent;
+            this.ProgressBar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ProgressBar.Location = new System.Drawing.Point(232, 284);
+            this.ProgressBar.Margin = new System.Windows.Forms.Padding(2);
             this.ProgressBar.Name = "ProgressBar";
             this.ProgressBar.Size = new System.Drawing.Size(234, 10);
             this.ProgressBar.TabIndex = 24;

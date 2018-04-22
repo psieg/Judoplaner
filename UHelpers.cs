@@ -220,24 +220,24 @@ namespace UHelpers
                     s = s.Substring(0, s.Length - 1);
                     textSize = b.MeasureString(s + "…", font);
                 }
-                b.DrawString(s + "…", font, brush, x, y);
+                b.DrawString(s + "…", font, brush, x, y + 1);
             }
             else
             {
                 if (p == System.Drawing.ContentAlignment.TopLeft)
                 {
                     // left
-                    b.DrawString(s, font, brush, x, y);
+                    b.DrawString(s, font, brush, x, y + 1);
                 }
                 else if (p == System.Drawing.ContentAlignment.TopRight)
                 {
                     // right
-                    b.DrawString(s, font, brush, x + l - textSize.Width, y);
+                    b.DrawString(s, font, brush, x + l - textSize.Width, y + 1);
                 }
                 else
                 {
                     // center
-                    b.DrawString(s, font, brush, (float)(x + Math.Floor((l - textSize.Width) / 2.0f)), y);
+                    b.DrawString(s, font, brush, (float)(x + Math.Floor((l - textSize.Width) / 2.0f)), y + 1);
                 }
             }
             if (f)
@@ -391,26 +391,7 @@ namespace UHelpers
         // TODO: Find better/faster version, builtin version
         public static string[] Explode(string s, char sep)
         {
-            string[] result;
-            int i;
-            int p;
-            result = new string[0];
-            p = 0;
-            // = Length(Result) - 1
-            result = new string[1];
-            for (i = 1; i <= s.Length; i ++ )
-            {
-                if (s[i] == sep)
-                {
-                    p = p + 1;
-                    result = new string[p + 1];
-                }
-                else
-                {
-                    result[p] = result[p] + s[i];
-                }
-            }
-            return result;
+            return s.Split(sep);
         }
 
     } // end UHelpers

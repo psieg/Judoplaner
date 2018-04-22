@@ -86,11 +86,11 @@ namespace UGameDE
                 }
             }
             // Init Lose
+            LoseRound = new List<List<TMatch>>();
             if ((Settings.ShortLoseRound == -1) || (Math.Pow(2.0, Settings.ShortLoseRound) >= nGame))
             {
                 ShortLoseRound = false;
                 LenLose = (int)(Math.Floor(Math.Log(nGame / 2) / Math.Log(2.0)) - 1) * 2;
-                LoseRound = new List<List<TMatch>>();
                 for (i = 0; i < LenLose; i++)
                 {
                     int size = (int)Math.Floor(nGame / Math.Pow(2.0, Math.Ceiling((i + 3) / 2.0))); //TODO used to round up with comment screw this, verify
@@ -106,7 +106,6 @@ namespace UGameDE
                 // short LoseRound
                 ShortLoseRound = true;
                 LenLose = 2;
-                LoseRound.Clear();
                 LoseRound.Add(new List<TMatch>(2));
                 LoseRound[0].Add(new TMatch());
                 LoseRound[0].Add(new TMatch());
@@ -243,7 +242,7 @@ namespace UGameDE
             ShortLoseRound = Convert.ToBoolean(b[8]);
             // MainRound
             b = UHelpers.UHelpers.Explode(a[3], Units.Class.SEP_LIST);
-            MainRound.Clear();
+            MainRound = new List<List<TMatch>>();
             ctr = 0;
             for (i = 0; i < LenMain; i++)
             {
@@ -251,16 +250,15 @@ namespace UGameDE
                 MainRound.Add(new List<TMatch>(size));
                 for (j = 0; j < size; j++)
                 {
-                    MainRound[i][j] = new TMatch(b[ctr], Players, LosePlayer);
+                    MainRound[i].Add(new TMatch(b[ctr], Players, LosePlayer));
                     ctr = ctr + 1;
                 }
             }
             // LoseRound
             b = UHelpers.UHelpers.Explode(a[4], Units.Class.SEP_LIST);
-            LoseRound.Clear();
+            LoseRound = new List<List<TMatch>>();
             if (ShortLoseRound)
             {
-                LoseRound.Clear();
                 LoseRound.Add(new List<TMatch>(2));
                 LoseRound[0].Add(new TMatch(b[0], Players, LosePlayer));
                 LoseRound[0].Add(new TMatch(b[1], Players, LosePlayer));
@@ -270,7 +268,6 @@ namespace UGameDE
             }
             else
             {
-                LoseRound.Clear();
                 ctr = 0;
                 for (i = 0; i < LenLose; i++)
                 {
@@ -278,7 +275,7 @@ namespace UGameDE
                     LoseRound.Add(new List<TMatch>(size));
                     for (j = 0; j < size; j++)
                     {
-                        LoseRound[i][j] = new TMatch(b[ctr], Players, LosePlayer);
+                        LoseRound[i].Add(new TMatch(b[ctr], Players, LosePlayer));
                         ctr = ctr + 1;
                     }
                 }

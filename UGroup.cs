@@ -11,7 +11,6 @@ using UFight;
 using USettings;
 using UDisplay;
 using UPrint;
-using System.Runtime.InteropServices;
 
 namespace UGroup
 {
@@ -148,22 +147,23 @@ namespace UGroup
 
         public void LoadGame(string FileName)
         {
-            List<string> list;
             if (File.Exists(FileName))
             {
-                list = new List<string>();
-                System.IO.File.ReadAllLines(FileName);
-                if (list[0].StartsWith("DE"))
+                string[] list = System.IO.File.ReadAllLines(FileName);
+                if (list.Length > 0)
                 {
-                    Units.Group.GameDE = new TGameDE(list[0], Units.Group.Settings);
-                }
-                else
-                {
-                    Units.Group.GameRR = new TGameRR(list[0], Units.Group.Settings);
-                    Units.Group.GameRRStore = null;
-                    if (list.Count > 1)
+                    if (list[0].StartsWith("DE"))
                     {
-                        Units.Group.GameRRStore = new TGameRR(list[1], Units.Group.Settings);
+                        Units.Group.GameDE = new TGameDE(list[0], Units.Group.Settings);
+                    }
+                    else
+                    {
+                        Units.Group.GameRR = new TGameRR(list[0], Units.Group.Settings);
+                        Units.Group.GameRRStore = null;
+                        if (list.Length > 1)
+                        {
+                            Units.Group.GameRRStore = new TGameRR(list[1], Units.Group.Settings);
+                        }
                     }
                 }
             }
@@ -278,7 +278,7 @@ namespace UGroup
                         Units.Fight.BacklinkGameRR = Units.Group.GameRR;
                     }
                     Units.Group.GroupForm.Enabled = false;
-                    Units.Fight.FightForm.Show();
+                    Units.Fight.FightForm.ShowDialog(this);
                     if (Units.Group.isDE)
                     {
                         tmpmatch = Units.Group.GameDE.GetPreparingMatch();
@@ -395,14 +395,12 @@ namespace UGroup
             Units.Settings.BacklinkForm = Units.Group.GroupForm;
             Units.Settings.BacklinkSettings = Units.Group.Settings;
             Units.Group.GroupForm.Enabled = false;
-            Units.Settings.SettingsForm.Show();
+            Units.Settings.SettingsForm.ShowDialog(this);
         }
 
         public void FormCreate(System.Object Sender, System.EventArgs _e1)
         {
-            Units.Group.Settings = new TSettings();
-            // Defaults in constructor
-            Label1.Text = Units.Class.APPNAME + ' ' + Units.Class.VERSION + ' ';
+            Units.Group.Settings = new TSettings(); // Defaults in constructor
             this.Text = Units.Class.APPNAME + ' ' + Units.Class.VERSION;
             Units.Group.Settings.ReadFromFile(Path.GetDirectoryName(System.Environment.GetCommandLineArgs()[0]) + Units.Class.INIFILE + ".ini");
             Units.Group.Settings.LoadImageFromFile(Units.Class.LOGOFILE + ".bmp");
@@ -490,7 +488,7 @@ namespace UGroup
         }
 
         // Note: the original parameters are Object Sender, ref TCloseAction Action
-        public void FormClose(System.Object Sender, System.EventArgs _e1)
+        public void FormClose(object sender, FormClosedEventArgs e)
         {
             File.Delete(Units.Class.BACKUPFILE + Units.Class.FILEEXT);
             Application.Exit();
@@ -530,7 +528,7 @@ namespace UGroup
             Bitmap tmpbitmap;
             Bitmap bm1;
             Bitmap bm2;
-            Units.Print.PrintForm.Show();
+            Units.Print.PrintForm.ShowDialog(this);
             if (Units.Group.isDE)
             {
                 Units.Print.PrintForm.Print(Units.Group.GameDE.ToBitmap(), "Spielplan Doppel-KO", true, UPrint.PRINTSCALE.PRINTSCL_SCALE_X);
@@ -552,7 +550,7 @@ namespace UGroup
 
         public void PrintResultButtonClick(System.Object Sender, System.EventArgs _e1)
         {
-            Units.Print.PrintForm.Show();
+            Units.Print.PrintForm.ShowDialog(this);
             if (Units.Group.isDE)
             {
                 Units.Print.PrintForm.Print(Units.Group.GameDE.ToBitmapResult(Units.Group.Settings.Logo), "Spielplan Doppel-KO", true, UPrint.PRINTSCALE.PRINTSCL_SCALE_X);
@@ -571,7 +569,7 @@ namespace UGroup
             Units.Print.PrintForm.Hide();
         }
 
-        public void FormShow(Object Sender)
+        public void FormShow(object sender, EventArgs e)
         {
             if (Units.Group.TryRestore && RestoreBackup())
             {
@@ -580,8 +578,7 @@ namespace UGroup
             Units.Group.TryRestore = false;
         }
 
-        // Note: the original parameters are Object Sender, ref bool CanClose
-        public void FormCloseQuery(System.Object Sender, System.ComponentModel.CancelEventArgs _e1)
+        public void FormCloseQuery(object sender, FormClosingEventArgs e)
         {
             bool ask;
             ask = false;
@@ -601,10 +598,9 @@ namespace UGroup
             }
             if (ask && (MessageBox.Show(("Wirklich beenden? Im Moment ist ein Spiel aktiv!" as string), ("Beenden" as string), System.Windows.Forms.MessageBoxButtons.OKCancel, System.Windows.Forms.MessageBoxIcon.Exclamation ) == System.Windows.Forms.DialogResult.Cancel))
             {
-                _e1.Cancel = true;
+                e.Cancel = true;
             }
         }
-
     } // end TGroupForm
 
 }

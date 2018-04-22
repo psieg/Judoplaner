@@ -9,8 +9,6 @@ namespace UGroup
         public System.Windows.Forms.PictureBox PrintImage;
         public System.Windows.Forms.Button SettingsButton;
         public System.Windows.Forms.GroupBox PlayersBox;
-        public System.Windows.Forms.PictureBox Image1;
-        public System.Windows.Forms.Label Label1;
         public System.Windows.Forms.Button AddPlayerButton;
         public System.Windows.Forms.TextBox PrenameEdit;
         public System.Windows.Forms.TextBox LastnameEdit;
@@ -40,6 +38,7 @@ namespace UGroup
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TGroupForm));
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.StatsLabel = new System.Windows.Forms.Label();
             this.PrepareLabel = new System.Windows.Forms.Label();
@@ -48,8 +47,6 @@ namespace UGroup
             this.PrintImage = new System.Windows.Forms.PictureBox();
             this.SettingsButton = new System.Windows.Forms.Button();
             this.PlayersBox = new System.Windows.Forms.GroupBox();
-            this.Label1 = new System.Windows.Forms.Label();
-            this.Image1 = new System.Windows.Forms.PictureBox();
             this.AddPlayerButton = new System.Windows.Forms.Button();
             this.PrenameEdit = new System.Windows.Forms.TextBox();
             this.LastnameEdit = new System.Windows.Forms.TextBox();
@@ -64,7 +61,6 @@ namespace UGroup
             this.ScrollBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PrintImage)).BeginInit();
             this.PlayersBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Image1)).BeginInit();
             this.SuspendLayout();
             // 
             // StatsLabel
@@ -98,6 +94,7 @@ namespace UGroup
             // 
             // ScrollBox
             // 
+            this.ScrollBox.AutoScroll = true;
             this.ScrollBox.Controls.Add(this.PrintImage);
             this.ScrollBox.Location = new System.Drawing.Point(5, 35);
             this.ScrollBox.Name = "ScrollBox";
@@ -126,8 +123,6 @@ namespace UGroup
             // 
             // PlayersBox
             // 
-            this.PlayersBox.Controls.Add(this.Label1);
-            this.PlayersBox.Controls.Add(this.Image1);
             this.PlayersBox.Controls.Add(this.AddPlayerButton);
             this.PlayersBox.Controls.Add(this.PrenameEdit);
             this.PlayersBox.Controls.Add(this.LastnameEdit);
@@ -141,27 +136,6 @@ namespace UGroup
             this.PlayersBox.Size = new System.Drawing.Size(775, 505);
             this.PlayersBox.TabIndex = 0;
             this.PlayersBox.TabStop = false;
-            // 
-            // Label1
-            // 
-            this.Label1.BackColor = System.Drawing.Color.White;
-            this.Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label1.ForeColor = System.Drawing.Color.Gray;
-            this.Label1.Location = new System.Drawing.Point(398, 433);
-            this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(332, 46);
-            this.Label1.TabIndex = 2;
-            this.Label1.Text = "%Appname %Version";
-            // 
-            // Image1
-            // 
-            this.Image1.Image = global::Judoplaner2.Properties.Resources.logo;
-            this.Image1.Location = new System.Drawing.Point(328, 424);
-            this.Image1.Name = "Image1";
-            this.Image1.Size = new System.Drawing.Size(64, 64);
-            this.Image1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Image1.TabIndex = 1;
-            this.Image1.TabStop = false;
             // 
             // AddPlayerButton
             // 
@@ -178,7 +152,7 @@ namespace UGroup
             // 
             this.PrenameEdit.Location = new System.Drawing.Point(328, 16);
             this.PrenameEdit.Name = "PrenameEdit";
-            this.PrenameEdit.Size = new System.Drawing.Size(145, 26);
+            this.PrenameEdit.Size = new System.Drawing.Size(145, 20);
             this.PrenameEdit.TabIndex = 0;
             this.PrenameEdit.Text = "Vorname";
             this.PrenameEdit.Enter += new System.EventHandler(this.PrenameEditEnter);
@@ -187,7 +161,7 @@ namespace UGroup
             // 
             this.LastnameEdit.Location = new System.Drawing.Point(328, 48);
             this.LastnameEdit.Name = "LastnameEdit";
-            this.LastnameEdit.Size = new System.Drawing.Size(145, 26);
+            this.LastnameEdit.Size = new System.Drawing.Size(145, 20);
             this.LastnameEdit.TabIndex = 1;
             this.LastnameEdit.Text = "Nachname";
             this.LastnameEdit.Enter += new System.EventHandler(this.LastnameEditEnter);
@@ -207,24 +181,23 @@ namespace UGroup
             // 
             this.ClubEdit.Location = new System.Drawing.Point(328, 80);
             this.ClubEdit.Name = "ClubEdit";
-            this.ClubEdit.Size = new System.Drawing.Size(145, 26);
+            this.ClubEdit.Size = new System.Drawing.Size(145, 20);
             this.ClubEdit.TabIndex = 2;
             this.ClubEdit.Text = "Verein";
             this.ClubEdit.Enter += new System.EventHandler(this.ClubEditEnter);
             // 
             // PlayerBox
             // 
-            this.PlayerBox.ItemHeight = 20;
-            this.PlayerBox.Location = new System.Drawing.Point(8, 24);
+            this.PlayerBox.Location = new System.Drawing.Point(9, 16);
             this.PlayerBox.Name = "PlayerBox";
-            this.PlayerBox.Size = new System.Drawing.Size(313, 464);
+            this.PlayerBox.Size = new System.Drawing.Size(313, 459);
             this.PlayerBox.TabIndex = 4;
             // 
             // Edit1
             // 
             this.Edit1.Location = new System.Drawing.Point(344, 176);
             this.Edit1.Name = "Edit1";
-            this.Edit1.Size = new System.Drawing.Size(33, 26);
+            this.Edit1.Size = new System.Drawing.Size(33, 20);
             this.Edit1.TabIndex = 6;
             this.Edit1.Text = "16";
             // 
@@ -266,10 +239,14 @@ namespace UGroup
             // ProgressBar
             // 
             this.ProgressBar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.ProgressBar.BackColor = System.Drawing.Color.Transparent;
+            this.ProgressBar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ProgressBar.Location = new System.Drawing.Point(302, 544);
+            this.ProgressBar.Margin = new System.Windows.Forms.Padding(2);
             this.ProgressBar.Name = "ProgressBar";
             this.ProgressBar.Size = new System.Drawing.Size(382, 10);
             this.ProgressBar.TabIndex = 6;
+            this.ProgressBar.Value = 0;
             // 
             // TGroupForm
             // 
@@ -285,13 +262,15 @@ namespace UGroup
             this.Controls.Add(this.PrintResultButton);
             this.Controls.Add(this.ScrollBox);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(256, 297);
             this.Name = "TGroupForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Judoplaner";
-            this.Closing += new System.ComponentModel.CancelEventHandler(this.FormCloseQuery);
-            this.Closed += new System.EventHandler(this.FormClose);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormCloseQuery);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormClose);
             this.Load += new System.EventHandler(this.FormCreate);
+            this.Shown += new System.EventHandler(this.FormShow);
             this.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.FormMouseWheel);
             this.Resize += new System.EventHandler(this.FormResize);
             this.ScrollBox.ResumeLayout(false);
@@ -299,7 +278,6 @@ namespace UGroup
             ((System.ComponentModel.ISupportInitialize)(this.PrintImage)).EndInit();
             this.PlayersBox.ResumeLayout(false);
             this.PlayersBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Image1)).EndInit();
             this.ResumeLayout(false);
 
         }

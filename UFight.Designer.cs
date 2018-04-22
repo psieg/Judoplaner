@@ -4,8 +4,6 @@ namespace UFight
     {
         public System.Windows.Forms.Label PlayerALabel;
         public System.Windows.Forms.Label PlayerBLabel;
-        public System.Windows.Forms.GroupBox PlayerAShape;
-        public System.Windows.Forms.GroupBox PlayerBShape;
         public System.Windows.Forms.Label TimeLabel;
         public System.Windows.Forms.Label PlayerA5Label;
         public System.Windows.Forms.Label PlayerB5Label;
@@ -52,8 +50,6 @@ namespace UFight
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.PlayerALabel = new System.Windows.Forms.Label();
             this.PlayerBLabel = new System.Windows.Forms.Label();
-            this.PlayerAShape = new System.Windows.Forms.GroupBox();
-            this.PlayerBShape = new System.Windows.Forms.GroupBox();
             this.TimeLabel = new System.Windows.Forms.Label();
             this.PlayerA5Label = new System.Windows.Forms.Label();
             this.PlayerB5Label = new System.Windows.Forms.Label();
@@ -78,6 +74,8 @@ namespace UFight
             this.GoButton = new System.Windows.Forms.Button();
             this.UndoButton = new System.Windows.Forms.Button();
             this.TimeTimer = new System.Windows.Forms.Timer(this.components);
+            this.PlayerAShape = new System.Windows.Forms.GroupBox();
+            this.PlayerBShape = new System.Windows.Forms.GroupBox();
             this.SuspendLayout();
             // 
             // PlayerALabel
@@ -95,22 +93,6 @@ namespace UFight
             this.PlayerBLabel.Size = new System.Drawing.Size(217, 13);
             this.PlayerBLabel.TabIndex = 1;
             this.PlayerBLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // PlayerAShape
-            // 
-            this.PlayerAShape.Location = new System.Drawing.Point(8, 24);
-            this.PlayerAShape.Name = "PlayerAShape";
-            this.PlayerAShape.Size = new System.Drawing.Size(217, 217);
-            this.PlayerAShape.TabIndex = 2;
-            this.PlayerAShape.TabStop = false;
-            // 
-            // PlayerBShape
-            // 
-            this.PlayerBShape.Location = new System.Drawing.Point(304, 24);
-            this.PlayerBShape.Name = "PlayerBShape";
-            this.PlayerBShape.Size = new System.Drawing.Size(217, 217);
-            this.PlayerBShape.TabIndex = 3;
-            this.PlayerBShape.TabStop = false;
             // 
             // TimeLabel
             // 
@@ -350,6 +332,22 @@ namespace UFight
             // 
             this.TimeTimer.Tick += new System.EventHandler(this.TimeTimerTimer);
             // 
+            // PlayerAShape
+            // 
+            this.PlayerAShape.Location = new System.Drawing.Point(8, 24);
+            this.PlayerAShape.Name = "PlayerAShape";
+            this.PlayerAShape.Size = new System.Drawing.Size(217, 217);
+            this.PlayerAShape.TabIndex = 2;
+            this.PlayerAShape.TabStop = false;
+            // 
+            // PlayerBShape
+            // 
+            this.PlayerBShape.Location = new System.Drawing.Point(304, 24);
+            this.PlayerBShape.Name = "PlayerBShape";
+            this.PlayerBShape.Size = new System.Drawing.Size(217, 217);
+            this.PlayerBShape.TabIndex = 3;
+            this.PlayerBShape.TabStop = false;
+            // 
             // TFightForm
             // 
             this.AutoScroll = true;
@@ -388,6 +386,7 @@ namespace UFight
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "TFightForm";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FightForm";
             this.Closing += new System.ComponentModel.CancelEventHandler(this.FormCloseQuery);
@@ -398,6 +397,8 @@ namespace UFight
 #endregion
 
         private System.ComponentModel.IContainer components;
+        public System.Windows.Forms.GroupBox PlayerAShape;
+        public System.Windows.Forms.GroupBox PlayerBShape;
 
     }
 }

@@ -90,7 +90,7 @@ namespace USettings
             // 
             this.Label1.Location = new System.Drawing.Point(8, 89);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(46, 13);
+            this.Label1.Size = new System.Drawing.Size(66, 13);
             this.Label1.TabIndex = 0;
             this.Label1.Text = "Kampfzeit";
             this.toolTip1.SetToolTip(this.Label1, "Diese Einstellung wirkt sich sofort aus");
@@ -106,7 +106,7 @@ namespace USettings
             // 
             // UseRedForFirstPlayerBox
             // 
-            this.UseRedForFirstPlayerBox.Location = new System.Drawing.Point(8, 40);
+            this.UseRedForFirstPlayerBox.Location = new System.Drawing.Point(6, 40);
             this.UseRedForFirstPlayerBox.Name = "UseRedForFirstPlayerBox";
             this.UseRedForFirstPlayerBox.Size = new System.Drawing.Size(521, 17);
             this.UseRedForFirstPlayerBox.TabIndex = 0;
@@ -116,7 +116,7 @@ namespace USettings
             // 
             // AutoResizeFormBox
             // 
-            this.AutoResizeFormBox.Location = new System.Drawing.Point(8, 16);
+            this.AutoResizeFormBox.Location = new System.Drawing.Point(6, 19);
             this.AutoResizeFormBox.Name = "AutoResizeFormBox";
             this.AutoResizeFormBox.Size = new System.Drawing.Size(521, 17);
             this.AutoResizeFormBox.TabIndex = 1;
@@ -143,7 +143,7 @@ namespace USettings
             // 
             this.Label3.Location = new System.Drawing.Point(162, 1);
             this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(15, 13);
+            this.Label3.Size = new System.Drawing.Size(22, 13);
             this.Label3.TabIndex = 0;
             this.Label3.Text = "TN";
             // 
@@ -185,9 +185,9 @@ namespace USettings
             // 
             // ShortLoseRoundNoneButton
             // 
-            this.ShortLoseRoundNoneButton.Location = new System.Drawing.Point(192, 0);
+            this.ShortLoseRoundNoneButton.Location = new System.Drawing.Point(192, -1);
             this.ShortLoseRoundNoneButton.Name = "ShortLoseRoundNoneButton";
-            this.ShortLoseRoundNoneButton.Size = new System.Drawing.Size(57, 17);
+            this.ShortLoseRoundNoneButton.Size = new System.Drawing.Size(65, 17);
             this.ShortLoseRoundNoneButton.TabIndex = 4;
             this.ShortLoseRoundNoneButton.Text = "garnicht";
             this.ShortLoseRoundNoneButton.Click += new System.EventHandler(this.ShortLoseRoundNoneButtonClick);
@@ -202,76 +202,82 @@ namespace USettings
             this.FightDurationPanel.Controls.Add(this.FightDuration4Button);
             this.FightDurationPanel.Controls.Add(this.FightDuration5Button);
             this.FightDurationPanel.Controls.Add(this.FightDurationEdit);
-            this.FightDurationPanel.Location = new System.Drawing.Point(64, 88);
+            this.FightDurationPanel.Location = new System.Drawing.Point(80, 88);
             this.FightDurationPanel.Name = "FightDurationPanel";
-            this.FightDurationPanel.Size = new System.Drawing.Size(465, 19);
+            this.FightDurationPanel.Size = new System.Drawing.Size(449, 45);
             this.FightDurationPanel.TabIndex = 3;
             this.toolTip1.SetToolTip(this.FightDurationPanel, "Diese Einstellung wirkt sich sofort aus");
             // 
             // Label5
             // 
-            this.Label5.Location = new System.Drawing.Point(435, 2);
+            this.Label5.AutoSize = true;
+            this.Label5.Location = new System.Drawing.Point(103, 24);
             this.Label5.Name = "Label5";
-            this.Label5.Size = new System.Drawing.Size(22, 13);
+            this.Label5.Size = new System.Drawing.Size(56, 13);
             this.Label5.TabIndex = 0;
-            this.Label5.Text = "Sek.";
+            this.Label5.Text = "Sekunden";
             // 
             // FightDurationCustomButton
             // 
-            this.FightDurationCustomButton.Location = new System.Drawing.Point(344, 0);
+            this.FightDurationCustomButton.AutoSize = true;
+            this.FightDurationCustomButton.Location = new System.Drawing.Point(0, 22);
             this.FightDurationCustomButton.Name = "FightDurationCustomButton";
-            this.FightDurationCustomButton.Size = new System.Drawing.Size(57, 17);
+            this.FightDurationCustomButton.Size = new System.Drawing.Size(58, 17);
             this.FightDurationCustomButton.TabIndex = 0;
             this.FightDurationCustomButton.Text = "Eigene";
             // 
             // FightDuration2Button
             // 
-            this.FightDuration2Button.Location = new System.Drawing.Point(0, 0);
+            this.FightDuration2Button.AutoSize = true;
+            this.FightDuration2Button.Location = new System.Drawing.Point(0, 1);
             this.FightDuration2Button.Name = "FightDuration2Button";
-            this.FightDuration2Button.Size = new System.Drawing.Size(73, 17);
+            this.FightDuration2Button.Size = new System.Drawing.Size(76, 17);
             this.FightDuration2Button.TabIndex = 1;
             this.FightDuration2Button.Text = "U11 (2min)";
             this.FightDuration2Button.Click += new System.EventHandler(this.FightDuration2ButtonClick);
             // 
             // FightDuration3Button
             // 
-            this.FightDuration3Button.Location = new System.Drawing.Point(80, 0);
+            this.FightDuration3Button.AutoSize = true;
+            this.FightDuration3Button.Location = new System.Drawing.Point(82, 1);
             this.FightDuration3Button.Name = "FightDuration3Button";
-            this.FightDuration3Button.Size = new System.Drawing.Size(73, 17);
+            this.FightDuration3Button.Size = new System.Drawing.Size(76, 17);
             this.FightDuration3Button.TabIndex = 2;
             this.FightDuration3Button.Text = "U12 (3min)";
             this.FightDuration3Button.Click += new System.EventHandler(this.FightDuration3ButtonClick);
             // 
             // FightDuration4Button
             // 
-            this.FightDuration4Button.Location = new System.Drawing.Point(160, 0);
+            this.FightDuration4Button.AutoSize = true;
+            this.FightDuration4Button.Location = new System.Drawing.Point(164, 1);
             this.FightDuration4Button.Name = "FightDuration4Button";
-            this.FightDuration4Button.Size = new System.Drawing.Size(97, 17);
+            this.FightDuration4Button.Size = new System.Drawing.Size(102, 17);
             this.FightDuration4Button.TabIndex = 3;
             this.FightDuration4Button.Text = "U17, U20 (4min)";
             this.FightDuration4Button.Click += new System.EventHandler(this.FightDuration4ButtonClick);
             // 
             // FightDuration5Button
             // 
-            this.FightDuration5Button.Location = new System.Drawing.Point(264, 0);
+            this.FightDuration5Button.AutoSize = true;
+            this.FightDuration5Button.Location = new System.Drawing.Point(272, 1);
             this.FightDuration5Button.Name = "FightDuration5Button";
-            this.FightDuration5Button.Size = new System.Drawing.Size(81, 17);
+            this.FightDuration5Button.Size = new System.Drawing.Size(84, 17);
             this.FightDuration5Button.TabIndex = 4;
             this.FightDuration5Button.Text = "Ab 17 (5min)";
             this.FightDuration5Button.Click += new System.EventHandler(this.FightDuration5ButtonClick);
             // 
             // FightDurationEdit
             // 
-            this.FightDurationEdit.Location = new System.Drawing.Point(400, 0);
+            this.FightDurationEdit.Location = new System.Drawing.Point(64, 21);
             this.FightDurationEdit.Name = "FightDurationEdit";
-            this.FightDurationEdit.Size = new System.Drawing.Size(33, 26);
+            this.FightDurationEdit.Size = new System.Drawing.Size(33, 20);
             this.FightDurationEdit.TabIndex = 5;
             this.FightDurationEdit.Text = "180";
             this.FightDurationEdit.ModifiedChanged += new System.EventHandler(this.FightDurationEditChange);
             // 
             // SwitchStepsSystemAt32Box
             // 
-            this.SwitchStepsSystemAt32Box.Location = new System.Drawing.Point(8, 16);
+            this.SwitchStepsSystemAt32Box.Location = new System.Drawing.Point(6, 19);
             this.SwitchStepsSystemAt32Box.Name = "SwitchStepsSystemAt32Box";
             this.SwitchStepsSystemAt32Box.Size = new System.Drawing.Size(521, 17);
             this.SwitchStepsSystemAt32Box.TabIndex = 0;
@@ -282,7 +288,7 @@ namespace USettings
             // 
             // SwitchJumpSlotOrderAt32Box
             // 
-            this.SwitchJumpSlotOrderAt32Box.Location = new System.Drawing.Point(8, 40);
+            this.SwitchJumpSlotOrderAt32Box.Location = new System.Drawing.Point(6, 42);
             this.SwitchJumpSlotOrderAt32Box.Name = "SwitchJumpSlotOrderAt32Box";
             this.SwitchJumpSlotOrderAt32Box.Size = new System.Drawing.Size(521, 17);
             this.SwitchJumpSlotOrderAt32Box.TabIndex = 1;
@@ -293,7 +299,7 @@ namespace USettings
             // 
             // SaveToIniBox
             // 
-            this.SaveToIniBox.Location = new System.Drawing.Point(8, 224);
+            this.SaveToIniBox.Location = new System.Drawing.Point(12, 252);
             this.SaveToIniBox.Name = "SaveToIniBox";
             this.SaveToIniBox.Size = new System.Drawing.Size(521, 17);
             this.SaveToIniBox.TabIndex = 4;
@@ -304,7 +310,7 @@ namespace USettings
             // OKButton
             // 
             this.OKButton.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.OKButton.Location = new System.Drawing.Point(8, 248);
+            this.OKButton.Location = new System.Drawing.Point(12, 275);
             this.OKButton.Name = "OKButton";
             this.OKButton.Size = new System.Drawing.Size(169, 25);
             this.OKButton.TabIndex = 0;
@@ -323,24 +329,24 @@ namespace USettings
             this.EasyBox.Controls.Add(this.ShortLoseRoundPanel);
             this.EasyBox.Controls.Add(this.FightDurationPanel);
             this.EasyBox.Controls.Add(this.ReloadLogoButton);
-            this.EasyBox.Location = new System.Drawing.Point(8, 8);
+            this.EasyBox.Location = new System.Drawing.Point(12, 12);
             this.EasyBox.Name = "EasyBox";
-            this.EasyBox.Size = new System.Drawing.Size(537, 137);
+            this.EasyBox.Size = new System.Drawing.Size(537, 163);
             this.EasyBox.TabIndex = 1;
             this.EasyBox.TabStop = false;
             this.EasyBox.Text = "Einfache Einstellungen ";
             // 
             // Label4
             // 
-            this.Label4.Location = new System.Drawing.Point(8, 112);
+            this.Label4.Location = new System.Drawing.Point(5, 136);
             this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(335, 13);
+            this.Label4.Size = new System.Drawing.Size(348, 13);
             this.Label4.TabIndex = 2;
             this.Label4.Text = "Vereinslogo: logo.bmp ins Verzeichnis des Programms kopieren. Status:";
             // 
             // LogoLabel
             // 
-            this.LogoLabel.Location = new System.Drawing.Point(352, 112);
+            this.LogoLabel.Location = new System.Drawing.Point(349, 136);
             this.LogoLabel.Name = "LogoLabel";
             this.LogoLabel.Size = new System.Drawing.Size(96, 13);
             this.LogoLabel.TabIndex = 3;
@@ -349,9 +355,9 @@ namespace USettings
             // ReloadLogoButton
             // 
             this.ReloadLogoButton.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ReloadLogoButton.Location = new System.Drawing.Point(456, 111);
+            this.ReloadLogoButton.Location = new System.Drawing.Point(456, 132);
             this.ReloadLogoButton.Name = "ReloadLogoButton";
-            this.ReloadLogoButton.Size = new System.Drawing.Size(75, 17);
+            this.ReloadLogoButton.Size = new System.Drawing.Size(75, 20);
             this.ReloadLogoButton.TabIndex = 4;
             this.ReloadLogoButton.Text = "neu laden";
             this.ReloadLogoButton.UseVisualStyleBackColor = false;
@@ -361,7 +367,7 @@ namespace USettings
             // 
             this.ExtendedBox.Controls.Add(this.SwitchStepsSystemAt32Box);
             this.ExtendedBox.Controls.Add(this.SwitchJumpSlotOrderAt32Box);
-            this.ExtendedBox.Location = new System.Drawing.Point(8, 152);
+            this.ExtendedBox.Location = new System.Drawing.Point(12, 181);
             this.ExtendedBox.Name = "ExtendedBox";
             this.ExtendedBox.Size = new System.Drawing.Size(537, 65);
             this.ExtendedBox.TabIndex = 2;
@@ -371,7 +377,7 @@ namespace USettings
             // DefaultsButton
             // 
             this.DefaultsButton.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.DefaultsButton.Location = new System.Drawing.Point(360, 248);
+            this.DefaultsButton.Location = new System.Drawing.Point(364, 275);
             this.DefaultsButton.Name = "DefaultsButton";
             this.DefaultsButton.Size = new System.Drawing.Size(185, 25);
             this.DefaultsButton.TabIndex = 3;
@@ -382,8 +388,7 @@ namespace USettings
             // TSettingsForm
             // 
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(553, 281);
+            this.ClientSize = new System.Drawing.Size(559, 311);
             this.Controls.Add(this.OKButton);
             this.Controls.Add(this.EasyBox);
             this.Controls.Add(this.ExtendedBox);
@@ -392,7 +397,10 @@ namespace USettings
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Location = new System.Drawing.Point(1047, 330);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "TSettingsForm";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Einstellungen";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormClose);
