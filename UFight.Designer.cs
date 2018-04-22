@@ -1,0 +1,403 @@
+namespace UFight
+{
+  partial class TFightForm
+    {
+        public System.Windows.Forms.Label PlayerALabel;
+        public System.Windows.Forms.Label PlayerBLabel;
+        public System.Windows.Forms.GroupBox PlayerAShape;
+        public System.Windows.Forms.GroupBox PlayerBShape;
+        public System.Windows.Forms.Label TimeLabel;
+        public System.Windows.Forms.Label PlayerA5Label;
+        public System.Windows.Forms.Label PlayerB5Label;
+        public System.Windows.Forms.Label PlayerB7Label;
+        public System.Windows.Forms.Label PlayerB10Label;
+        public System.Windows.Forms.Label PlayerA7Label;
+        public System.Windows.Forms.Label PlayerA10Label;
+        public System.Windows.Forms.Label PlayerAPunishLabel;
+        public System.Windows.Forms.Label PlayerBPunishLabel;
+        public System.Windows.Forms.Label HoldTimeLabel;
+        public System.Windows.Forms.Button PlayerB10Button;
+        public System.Windows.Forms.Button PauseButton;
+        public System.Windows.Forms.Button PlayerA7Button;
+        public System.Windows.Forms.Button PlayerA5Button;
+        public System.Windows.Forms.Button PlayerB7Button;
+        public System.Windows.Forms.Button PlayerB5Button;
+        public System.Windows.Forms.Button PlayerAPunishButton;
+        public System.Windows.Forms.Button PlayerBPunishButton;
+        public System.Windows.Forms.Button PlayerA10Button;
+        public System.Windows.Forms.Button PlayerBHoldButton;
+        public System.Windows.Forms.Button PlayerAHoldButton;
+        public System.Windows.Forms.Button GoButton;
+        public System.Windows.Forms.Button UndoButton;
+        public System.Windows.Forms.Timer TimeTimer;
+        private System.Windows.Forms.ToolTip toolTip1 = null;
+
+        // Clean up any resources being used.
+        protected override void Dispose(bool disposing)
+        {
+            if(disposing)
+            {
+                if(components != null)
+                {
+                    components.Dispose();
+                }
+            }
+            base.Dispose(disposing);
+        }
+
+#region Windows Form Designer generated code
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.PlayerALabel = new System.Windows.Forms.Label();
+            this.PlayerBLabel = new System.Windows.Forms.Label();
+            this.PlayerAShape = new System.Windows.Forms.GroupBox();
+            this.PlayerBShape = new System.Windows.Forms.GroupBox();
+            this.TimeLabel = new System.Windows.Forms.Label();
+            this.PlayerA5Label = new System.Windows.Forms.Label();
+            this.PlayerB5Label = new System.Windows.Forms.Label();
+            this.PlayerB7Label = new System.Windows.Forms.Label();
+            this.PlayerB10Label = new System.Windows.Forms.Label();
+            this.PlayerA7Label = new System.Windows.Forms.Label();
+            this.PlayerA10Label = new System.Windows.Forms.Label();
+            this.PlayerAPunishLabel = new System.Windows.Forms.Label();
+            this.PlayerBPunishLabel = new System.Windows.Forms.Label();
+            this.HoldTimeLabel = new System.Windows.Forms.Label();
+            this.PlayerB10Button = new System.Windows.Forms.Button();
+            this.PauseButton = new System.Windows.Forms.Button();
+            this.PlayerA7Button = new System.Windows.Forms.Button();
+            this.PlayerA5Button = new System.Windows.Forms.Button();
+            this.PlayerB7Button = new System.Windows.Forms.Button();
+            this.PlayerB5Button = new System.Windows.Forms.Button();
+            this.PlayerAPunishButton = new System.Windows.Forms.Button();
+            this.PlayerBPunishButton = new System.Windows.Forms.Button();
+            this.PlayerA10Button = new System.Windows.Forms.Button();
+            this.PlayerBHoldButton = new System.Windows.Forms.Button();
+            this.PlayerAHoldButton = new System.Windows.Forms.Button();
+            this.GoButton = new System.Windows.Forms.Button();
+            this.UndoButton = new System.Windows.Forms.Button();
+            this.TimeTimer = new System.Windows.Forms.Timer(this.components);
+            this.SuspendLayout();
+            // 
+            // PlayerALabel
+            // 
+            this.PlayerALabel.Location = new System.Drawing.Point(8, 8);
+            this.PlayerALabel.Name = "PlayerALabel";
+            this.PlayerALabel.Size = new System.Drawing.Size(217, 13);
+            this.PlayerALabel.TabIndex = 0;
+            this.PlayerALabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // PlayerBLabel
+            // 
+            this.PlayerBLabel.Location = new System.Drawing.Point(304, 8);
+            this.PlayerBLabel.Name = "PlayerBLabel";
+            this.PlayerBLabel.Size = new System.Drawing.Size(217, 13);
+            this.PlayerBLabel.TabIndex = 1;
+            this.PlayerBLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // PlayerAShape
+            // 
+            this.PlayerAShape.Location = new System.Drawing.Point(8, 24);
+            this.PlayerAShape.Name = "PlayerAShape";
+            this.PlayerAShape.Size = new System.Drawing.Size(217, 217);
+            this.PlayerAShape.TabIndex = 2;
+            this.PlayerAShape.TabStop = false;
+            // 
+            // PlayerBShape
+            // 
+            this.PlayerBShape.Location = new System.Drawing.Point(304, 24);
+            this.PlayerBShape.Name = "PlayerBShape";
+            this.PlayerBShape.Size = new System.Drawing.Size(217, 217);
+            this.PlayerBShape.TabIndex = 3;
+            this.PlayerBShape.TabStop = false;
+            // 
+            // TimeLabel
+            // 
+            this.TimeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.TimeLabel.Location = new System.Drawing.Point(232, 112);
+            this.TimeLabel.Name = "TimeLabel";
+            this.TimeLabel.Size = new System.Drawing.Size(65, 25);
+            this.TimeLabel.TabIndex = 4;
+            this.TimeLabel.Text = "0:00";
+            this.TimeLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // PlayerA5Label
+            // 
+            this.PlayerA5Label.Location = new System.Drawing.Point(120, 256);
+            this.PlayerA5Label.Name = "PlayerA5Label";
+            this.PlayerA5Label.Size = new System.Drawing.Size(49, 13);
+            this.PlayerA5Label.TabIndex = 5;
+            this.PlayerA5Label.Text = "0";
+            this.PlayerA5Label.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // PlayerB5Label
+            // 
+            this.PlayerB5Label.Location = new System.Drawing.Point(416, 256);
+            this.PlayerB5Label.Name = "PlayerB5Label";
+            this.PlayerB5Label.Size = new System.Drawing.Size(49, 13);
+            this.PlayerB5Label.TabIndex = 6;
+            this.PlayerB5Label.Text = "0";
+            this.PlayerB5Label.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // PlayerB7Label
+            // 
+            this.PlayerB7Label.Location = new System.Drawing.Point(360, 256);
+            this.PlayerB7Label.Name = "PlayerB7Label";
+            this.PlayerB7Label.Size = new System.Drawing.Size(49, 13);
+            this.PlayerB7Label.TabIndex = 7;
+            this.PlayerB7Label.Text = "0";
+            this.PlayerB7Label.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // PlayerB10Label
+            // 
+            this.PlayerB10Label.Location = new System.Drawing.Point(304, 256);
+            this.PlayerB10Label.Name = "PlayerB10Label";
+            this.PlayerB10Label.Size = new System.Drawing.Size(49, 13);
+            this.PlayerB10Label.TabIndex = 8;
+            this.PlayerB10Label.Text = "0";
+            this.PlayerB10Label.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // PlayerA7Label
+            // 
+            this.PlayerA7Label.Location = new System.Drawing.Point(64, 256);
+            this.PlayerA7Label.Name = "PlayerA7Label";
+            this.PlayerA7Label.Size = new System.Drawing.Size(49, 13);
+            this.PlayerA7Label.TabIndex = 9;
+            this.PlayerA7Label.Text = "0";
+            this.PlayerA7Label.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // PlayerA10Label
+            // 
+            this.PlayerA10Label.Location = new System.Drawing.Point(8, 256);
+            this.PlayerA10Label.Name = "PlayerA10Label";
+            this.PlayerA10Label.Size = new System.Drawing.Size(49, 13);
+            this.PlayerA10Label.TabIndex = 10;
+            this.PlayerA10Label.Text = "0";
+            this.PlayerA10Label.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // PlayerAPunishLabel
+            // 
+            this.PlayerAPunishLabel.Location = new System.Drawing.Point(176, 256);
+            this.PlayerAPunishLabel.Name = "PlayerAPunishLabel";
+            this.PlayerAPunishLabel.Size = new System.Drawing.Size(49, 13);
+            this.PlayerAPunishLabel.TabIndex = 11;
+            this.PlayerAPunishLabel.Text = "0";
+            this.PlayerAPunishLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // PlayerBPunishLabel
+            // 
+            this.PlayerBPunishLabel.Location = new System.Drawing.Point(472, 256);
+            this.PlayerBPunishLabel.Name = "PlayerBPunishLabel";
+            this.PlayerBPunishLabel.Size = new System.Drawing.Size(48, 13);
+            this.PlayerBPunishLabel.TabIndex = 12;
+            this.PlayerBPunishLabel.Text = "0";
+            this.PlayerBPunishLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // HoldTimeLabel
+            // 
+            this.HoldTimeLabel.Location = new System.Drawing.Point(232, 168);
+            this.HoldTimeLabel.Name = "HoldTimeLabel";
+            this.HoldTimeLabel.Size = new System.Drawing.Size(65, 13);
+            this.HoldTimeLabel.TabIndex = 13;
+            this.HoldTimeLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // PlayerB10Button
+            // 
+            this.PlayerB10Button.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.PlayerB10Button.Location = new System.Drawing.Point(304, 272);
+            this.PlayerB10Button.Name = "PlayerB10Button";
+            this.PlayerB10Button.Size = new System.Drawing.Size(49, 17);
+            this.PlayerB10Button.TabIndex = 6;
+            this.PlayerB10Button.Text = "Ippon";
+            this.PlayerB10Button.UseVisualStyleBackColor = false;
+            this.PlayerB10Button.Click += new System.EventHandler(this.PlayerB10ButtonClick);
+            // 
+            // PauseButton
+            // 
+            this.PauseButton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.PauseButton.Location = new System.Drawing.Point(232, 256);
+            this.PauseButton.Name = "PauseButton";
+            this.PauseButton.Size = new System.Drawing.Size(65, 33);
+            this.PauseButton.TabIndex = 1;
+            this.PauseButton.Text = "Mat(t)e";
+            this.PauseButton.UseVisualStyleBackColor = false;
+            this.PauseButton.Visible = false;
+            this.PauseButton.Click += new System.EventHandler(this.PauseButtonClick);
+            // 
+            // PlayerA7Button
+            // 
+            this.PlayerA7Button.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.PlayerA7Button.Location = new System.Drawing.Point(64, 272);
+            this.PlayerA7Button.Name = "PlayerA7Button";
+            this.PlayerA7Button.Size = new System.Drawing.Size(49, 17);
+            this.PlayerA7Button.TabIndex = 3;
+            this.PlayerA7Button.Text = "Waza-ari";
+            this.PlayerA7Button.UseVisualStyleBackColor = false;
+            this.PlayerA7Button.Click += new System.EventHandler(this.PlayerA7ButtonClick);
+            // 
+            // PlayerA5Button
+            // 
+            this.PlayerA5Button.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.PlayerA5Button.Location = new System.Drawing.Point(120, 272);
+            this.PlayerA5Button.Name = "PlayerA5Button";
+            this.PlayerA5Button.Size = new System.Drawing.Size(49, 17);
+            this.PlayerA5Button.TabIndex = 4;
+            this.PlayerA5Button.Text = "Yuko";
+            this.PlayerA5Button.UseVisualStyleBackColor = false;
+            this.PlayerA5Button.Click += new System.EventHandler(this.PlayerA5ButtonClick);
+            // 
+            // PlayerB7Button
+            // 
+            this.PlayerB7Button.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.PlayerB7Button.Location = new System.Drawing.Point(360, 272);
+            this.PlayerB7Button.Name = "PlayerB7Button";
+            this.PlayerB7Button.Size = new System.Drawing.Size(49, 17);
+            this.PlayerB7Button.TabIndex = 7;
+            this.PlayerB7Button.Text = "Waza-ari";
+            this.PlayerB7Button.UseVisualStyleBackColor = false;
+            this.PlayerB7Button.Click += new System.EventHandler(this.PlayerB7ButtonClick);
+            // 
+            // PlayerB5Button
+            // 
+            this.PlayerB5Button.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.PlayerB5Button.Location = new System.Drawing.Point(416, 272);
+            this.PlayerB5Button.Name = "PlayerB5Button";
+            this.PlayerB5Button.Size = new System.Drawing.Size(49, 17);
+            this.PlayerB5Button.TabIndex = 8;
+            this.PlayerB5Button.Text = "Yuko";
+            this.PlayerB5Button.UseVisualStyleBackColor = false;
+            this.PlayerB5Button.Click += new System.EventHandler(this.PlayerB5ButtonClick);
+            // 
+            // PlayerAPunishButton
+            // 
+            this.PlayerAPunishButton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.PlayerAPunishButton.Location = new System.Drawing.Point(176, 272);
+            this.PlayerAPunishButton.Name = "PlayerAPunishButton";
+            this.PlayerAPunishButton.Size = new System.Drawing.Size(49, 17);
+            this.PlayerAPunishButton.TabIndex = 5;
+            this.PlayerAPunishButton.Text = "Shido";
+            this.PlayerAPunishButton.UseVisualStyleBackColor = false;
+            this.PlayerAPunishButton.Click += new System.EventHandler(this.PlayerAPunishButtonClick);
+            // 
+            // PlayerBPunishButton
+            // 
+            this.PlayerBPunishButton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.PlayerBPunishButton.Location = new System.Drawing.Point(472, 272);
+            this.PlayerBPunishButton.Name = "PlayerBPunishButton";
+            this.PlayerBPunishButton.Size = new System.Drawing.Size(49, 17);
+            this.PlayerBPunishButton.TabIndex = 9;
+            this.PlayerBPunishButton.Text = "Shido";
+            this.PlayerBPunishButton.UseVisualStyleBackColor = false;
+            this.PlayerBPunishButton.Click += new System.EventHandler(this.PlayerBPunishButtonClick);
+            // 
+            // PlayerA10Button
+            // 
+            this.PlayerA10Button.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.PlayerA10Button.Location = new System.Drawing.Point(8, 272);
+            this.PlayerA10Button.Name = "PlayerA10Button";
+            this.PlayerA10Button.Size = new System.Drawing.Size(49, 17);
+            this.PlayerA10Button.TabIndex = 2;
+            this.PlayerA10Button.Text = "Ippon";
+            this.PlayerA10Button.UseVisualStyleBackColor = false;
+            this.PlayerA10Button.Click += new System.EventHandler(this.PlayerA10ButtonClick);
+            // 
+            // PlayerBHoldButton
+            // 
+            this.PlayerBHoldButton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.PlayerBHoldButton.Location = new System.Drawing.Point(304, 296);
+            this.PlayerBHoldButton.Name = "PlayerBHoldButton";
+            this.PlayerBHoldButton.Size = new System.Drawing.Size(217, 17);
+            this.PlayerBHoldButton.TabIndex = 11;
+            this.PlayerBHoldButton.Text = "Osae-komi";
+            this.PlayerBHoldButton.UseVisualStyleBackColor = false;
+            this.PlayerBHoldButton.Click += new System.EventHandler(this.PlayerBHoldButtonClick);
+            // 
+            // PlayerAHoldButton
+            // 
+            this.PlayerAHoldButton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.PlayerAHoldButton.Location = new System.Drawing.Point(8, 296);
+            this.PlayerAHoldButton.Name = "PlayerAHoldButton";
+            this.PlayerAHoldButton.Size = new System.Drawing.Size(217, 17);
+            this.PlayerAHoldButton.TabIndex = 10;
+            this.PlayerAHoldButton.Text = "Osae-komi";
+            this.PlayerAHoldButton.UseVisualStyleBackColor = false;
+            this.PlayerAHoldButton.Click += new System.EventHandler(this.PlayerAHoldButtonClick);
+            // 
+            // GoButton
+            // 
+            this.GoButton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.GoButton.Location = new System.Drawing.Point(232, 256);
+            this.GoButton.Name = "GoButton";
+            this.GoButton.Size = new System.Drawing.Size(65, 33);
+            this.GoButton.TabIndex = 0;
+            this.GoButton.Text = "Hajime";
+            this.GoButton.UseVisualStyleBackColor = false;
+            this.GoButton.Click += new System.EventHandler(this.GoButtonClick);
+            // 
+            // UndoButton
+            // 
+            this.UndoButton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.UndoButton.Location = new System.Drawing.Point(232, 296);
+            this.UndoButton.Name = "UndoButton";
+            this.UndoButton.Size = new System.Drawing.Size(65, 17);
+            this.UndoButton.TabIndex = 12;
+            this.UndoButton.Text = "rückgängig";
+            this.UndoButton.UseVisualStyleBackColor = false;
+            this.UndoButton.Click += new System.EventHandler(this.UndoButtonClick);
+            // 
+            // TimeTimer
+            // 
+            this.TimeTimer.Tick += new System.EventHandler(this.TimeTimerTimer);
+            // 
+            // TFightForm
+            // 
+            this.AutoScroll = true;
+            this.BackColor = System.Drawing.SystemColors.Window;
+            this.ClientSize = new System.Drawing.Size(529, 320);
+            this.Controls.Add(this.PlayerALabel);
+            this.Controls.Add(this.PlayerBLabel);
+            this.Controls.Add(this.PlayerAShape);
+            this.Controls.Add(this.PlayerBShape);
+            this.Controls.Add(this.TimeLabel);
+            this.Controls.Add(this.PlayerA5Label);
+            this.Controls.Add(this.PlayerB5Label);
+            this.Controls.Add(this.PlayerB7Label);
+            this.Controls.Add(this.PlayerB10Label);
+            this.Controls.Add(this.PlayerA7Label);
+            this.Controls.Add(this.PlayerA10Label);
+            this.Controls.Add(this.PlayerAPunishLabel);
+            this.Controls.Add(this.PlayerBPunishLabel);
+            this.Controls.Add(this.HoldTimeLabel);
+            this.Controls.Add(this.PlayerB10Button);
+            this.Controls.Add(this.PauseButton);
+            this.Controls.Add(this.PlayerA7Button);
+            this.Controls.Add(this.PlayerA5Button);
+            this.Controls.Add(this.PlayerB7Button);
+            this.Controls.Add(this.PlayerB5Button);
+            this.Controls.Add(this.PlayerAPunishButton);
+            this.Controls.Add(this.PlayerBPunishButton);
+            this.Controls.Add(this.PlayerA10Button);
+            this.Controls.Add(this.PlayerBHoldButton);
+            this.Controls.Add(this.PlayerAHoldButton);
+            this.Controls.Add(this.GoButton);
+            this.Controls.Add(this.UndoButton);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Location = new System.Drawing.Point(408, 402);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "TFightForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "FightForm";
+            this.Closing += new System.ComponentModel.CancelEventHandler(this.FormCloseQuery);
+            this.Load += new System.EventHandler(this.FormCreate);
+            this.ResumeLayout(false);
+
+        }
+#endregion
+
+        private System.ComponentModel.IContainer components;
+
+    }
+}
