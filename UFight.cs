@@ -41,15 +41,9 @@ namespace UFight
                 {
                     Player = Units.Fight.B;
                 }
-                if (Units.Fight.HoldTime == 15)
+                if (Units.Fight.HoldTime == 20)
                 {
                     Backup();
-                    Give5Points(Player);
-                }
-                else if (Units.Fight.HoldTime == 20)
-                {
-                    Backup();
-                    Revoke5Points(Player);
                     Give7Points(Player);
                 }
                 else if (Units.Fight.HoldTime == 25)
@@ -108,49 +102,6 @@ namespace UFight
 
         // Revoke procedures do not care about consequences, use Backup() and Restore()
         // Revoke procedures do not update nor backup, only call internally!
-        public void Give5Points(bool PlayerA, bool direct, bool checkwin)
-        {
-            if (direct)
-            {
-                Backup();
-            }
-            if (PlayerA)
-            {
-                Units.Fight.PlayerA5Points = Units.Fight.PlayerA5Points + 1;
-            }
-            else
-            {
-                Units.Fight.PlayerB5Points = Units.Fight.PlayerB5Points + 1;
-            }
-            Updater();
-            if (checkwin && (Units.Fight.FightTime >= Units.Fight.BacklinkSettings.FightDuration))
-            {
-                Finish(5, PlayerA);
-            }
-        }
-
-        public void Give5Points(bool PlayerA)
-        {
-            Give5Points(PlayerA, false);
-        }
-
-        public void Give5Points(bool PlayerA, bool direct)
-        {
-            Give5Points(PlayerA, direct, true);
-        }
-
-        public void Revoke5Points(bool PlayerA)
-        {
-            if (PlayerA)
-            {
-                Units.Fight.PlayerA5Points = Units.Fight.PlayerA5Points - 1;
-            }
-            else
-            {
-                Units.Fight.PlayerB5Points = Units.Fight.PlayerB5Points - 1;
-            }
-        }
-
         public void Give7Points(bool PlayerA, bool direct, bool checkwin)
         {
             int PlayerX7Points;
@@ -265,47 +216,19 @@ namespace UFight
             }
             if (PlayerA)
             {
+                Units.Fight.PlayerAPunish = Units.Fight.PlayerAPunish + 1;
                 PlayerXPunish = Units.Fight.PlayerAPunish;
                 PlayerX7Points = Units.Fight.PlayerA7Points;
-                Units.Fight.PlayerAPunish = Units.Fight.PlayerAPunish + 1;
             }
             else
             {
+                Units.Fight.PlayerBPunish = Units.Fight.PlayerBPunish + 1;
                 PlayerXPunish = Units.Fight.PlayerBPunish;
                 PlayerX7Points = Units.Fight.PlayerB7Points;
-                Units.Fight.PlayerBPunish = Units.Fight.PlayerBPunish + 1;
             }
-            switch(PlayerXPunish)
+            if (PlayerXPunish == 3)
             {
-                case 0:
-                    if (checkwin && (Units.Fight.FightTime >= Units.Fight.BacklinkSettings.FightDuration))
-                    {
-                        Finish(1, !PlayerA);
-                    }
-                    break;
-                case 1:
-                    Give5Points(!PlayerA, false, false);
-                    // cant use checkwin here
-                    if (checkwin && (Units.Fight.FightTime >= Units.Fight.BacklinkSettings.FightDuration))
-                    {
-                        if (PlayerX7Points != 0)
-                        {
-                            Finish(7, !PlayerA);
-                        }
-                        else
-                        {
-                            Finish(5, !PlayerA);
-                        }
-                    }
-                    break;
-                case 2:
-                    Revoke5Points(!PlayerA);
-                    Give7Points(!PlayerA, false, true);
-                    break;
-                case 3:
-                    Revoke7Points(!PlayerA);
-                    Give10Points(!PlayerA, false, true);
-                    break;
+                Give10Points(!PlayerA, false, true);
             }
             Updater();
         }
@@ -351,8 +274,6 @@ namespace UFight
             PlayerB10Button.Enabled = false;
             PlayerA7Button.Enabled = false;
             PlayerB7Button.Enabled = false;
-            PlayerA5Button.Enabled = false;
-            PlayerB5Button.Enabled = false;
             PlayerAPunishButton.Enabled = false;
             PlayerBPunishButton.Enabled = false;
         }
@@ -369,19 +290,15 @@ namespace UFight
             PlayerB10Button.Enabled = true;
             PlayerA7Button.Enabled = true;
             PlayerB7Button.Enabled = true;
-            PlayerA5Button.Enabled = true;
-            PlayerB5Button.Enabled = true;
             PlayerAPunishButton.Enabled = true;
             PlayerBPunishButton.Enabled = true;
         }
 
         public void Backup()
         {
-            Units.Fight._PlayerA5Points = Units.Fight.PlayerA5Points;
             Units.Fight._PlayerA7Points = Units.Fight.PlayerA7Points;
             Units.Fight._PlayerA10Points = Units.Fight.PlayerA10Points;
             Units.Fight._PlayerAPunish = Units.Fight.PlayerAPunish;
-            Units.Fight._PlayerB5Points = Units.Fight.PlayerB5Points;
             Units.Fight._PlayerB7Points = Units.Fight.PlayerB7Points;
             Units.Fight._PlayerB10Points = Units.Fight.PlayerB10Points;
             Units.Fight._PlayerBPunish = Units.Fight.PlayerBPunish;
@@ -389,11 +306,9 @@ namespace UFight
 
         public void Restore()
         {
-            Units.Fight.PlayerA5Points = Units.Fight._PlayerA5Points;
             Units.Fight.PlayerA7Points = Units.Fight._PlayerA7Points;
             Units.Fight.PlayerA10Points = Units.Fight._PlayerA10Points;
             Units.Fight.PlayerAPunish = Units.Fight._PlayerAPunish;
-            Units.Fight.PlayerB5Points = Units.Fight._PlayerB5Points;
             Units.Fight.PlayerB7Points = Units.Fight._PlayerB7Points;
             Units.Fight.PlayerB10Points = Units.Fight._PlayerB10Points;
             Units.Fight.PlayerBPunish = Units.Fight._PlayerBPunish;
@@ -438,10 +353,6 @@ namespace UFight
             {
                 result = 7;
             }
-            else if (Units.Fight.PlayerA5Points != 0)
-            {
-                result = 5;
-            }
             else
             {
                 result =  -1;
@@ -461,10 +372,6 @@ namespace UFight
             else if (Units.Fight.PlayerB7Points != 0)
             {
                 result = 7;
-            }
-            else if (Units.Fight.PlayerB5Points != 0)
-            {
-                result = 5;
             }
             else
             {
@@ -496,14 +403,6 @@ namespace UFight
                 result = FIGHT_RESULT.FR_BWINS;
             }
             // both equal
-            else if (Units.Fight.PlayerA5Points > Units.Fight.PlayerB5Points)
-            {
-                result = FIGHT_RESULT.FR_AWINS;
-            }
-            else if (Units.Fight.PlayerB5Points > Units.Fight.PlayerA5Points)
-            {
-                result = FIGHT_RESULT.FR_BWINS;
-            }
             else
             {
                 result = FIGHT_RESULT.FR_TIE;
@@ -529,11 +428,9 @@ namespace UFight
             {
                 HoldTimeLabel.Text = UHelpers.UHelpers.TimeToStr(Units.Fight.HoldTimeMax - Units.Fight.HoldTime, UClass.TIMEFORMAT.TIMEFMT_S);
             }
-            PlayerA5Label.Text = (Units.Fight.PlayerA5Points).ToString();
             PlayerA7Label.Text = (Units.Fight.PlayerA7Points).ToString();
             PlayerA10Label.Text = (Units.Fight.PlayerA10Points).ToString();
             PlayerAPunishLabel.Text = (Units.Fight.PlayerAPunish).ToString();
-            PlayerB5Label.Text = (Units.Fight.PlayerB5Points).ToString();
             PlayerB7Label.Text = (Units.Fight.PlayerB7Points).ToString();
             PlayerB10Label.Text = (Units.Fight.PlayerB10Points).ToString();
             PlayerBPunishLabel.Text = (Units.Fight.PlayerBPunish).ToString();
@@ -541,11 +438,9 @@ namespace UFight
             {
                 Units.Display.DisplayForm.TimeLabel.Text = TimeLabel.Text;
                 Units.Display.DisplayForm.HoldTimeLabel.Text = HoldTimeLabel.Text;
-                Units.Display.DisplayForm.PlayerA5Label.Text = PlayerA5Label.Text;
                 Units.Display.DisplayForm.PlayerA7Label.Text = PlayerA7Label.Text;
                 Units.Display.DisplayForm.PlayerA10Label.Text = PlayerA10Label.Text;
                 Units.Display.DisplayForm.PlayerAPunishLabel.Text = PlayerAPunishLabel.Text;
-                Units.Display.DisplayForm.PlayerB5Label.Text = PlayerB5Label.Text;
                 Units.Display.DisplayForm.PlayerB7Label.Text = PlayerB7Label.Text;
                 Units.Display.DisplayForm.PlayerB10Label.Text = PlayerB10Label.Text;
                 Units.Display.DisplayForm.PlayerBPunishLabel.Text = PlayerBPunishLabel.Text;
@@ -589,11 +484,9 @@ namespace UFight
                 Units.Fight.FightTime = 0;
                 Units.Fight.HoldTime = 0;
                 Units.Fight.Holding = 0;
-                Units.Fight.PlayerA5Points = 0;
                 Units.Fight.PlayerA7Points = 0;
                 Units.Fight.PlayerA10Points = 0;
                 Units.Fight.PlayerAPunish = 0;
-                Units.Fight.PlayerB5Points = 0;
                 Units.Fight.PlayerB7Points = 0;
                 Units.Fight.PlayerB10Points = 0;
                 Units.Fight.PlayerBPunish = 0;
@@ -629,16 +522,6 @@ namespace UFight
         public void PlayerB7ButtonClick(System.Object Sender, System.EventArgs _e1)
         {
             Give7Points(Units.Fight.B, true);
-        }
-
-        public void PlayerA5ButtonClick(System.Object Sender, System.EventArgs _e1)
-        {
-            Give5Points(Units.Fight.A, true);
-        }
-
-        public void PlayerB5ButtonClick(System.Object Sender, System.EventArgs _e1)
-        {
-            Give5Points(Units.Fight.B, true);
         }
 
         public void PlayerAPunishButtonClick(System.Object Sender, System.EventArgs _e1)
@@ -707,19 +590,15 @@ namespace Units
         public static int HoldTime = 0;
         public static int HoldTimeMax = 0;
         public static int Holding = 0;
-        public static int PlayerA5Points = 0;
         public static int PlayerA7Points = 0;
         public static int PlayerA10Points = 0;
         public static int PlayerAPunish = 0;
-        public static int PlayerB5Points = 0;
         public static int PlayerB7Points = 0;
         public static int PlayerB10Points = 0;
         public static int PlayerBPunish = 0;
-        public static int _PlayerA5Points = 0;
         public static int _PlayerA7Points = 0;
         public static int _PlayerA10Points = 0;
         public static int _PlayerAPunish = 0;
-        public static int _PlayerB5Points = 0;
         public static int _PlayerB7Points = 0;
         public static int _PlayerB10Points = 0;
         public static int _PlayerBPunish = 0;

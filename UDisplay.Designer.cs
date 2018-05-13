@@ -7,8 +7,6 @@ namespace UDisplay
         public System.Windows.Forms.GroupBox PlayerAShape;
         public System.Windows.Forms.GroupBox PlayerBShape;
         public System.Windows.Forms.Label TimeLabel;
-        public System.Windows.Forms.Label PlayerA5Label;
-        public System.Windows.Forms.Label PlayerB5Label;
         public System.Windows.Forms.Label PlayerB7Label;
         public System.Windows.Forms.Label PlayerB10Label;
         public System.Windows.Forms.Label PlayerA7Label;
@@ -16,8 +14,6 @@ namespace UDisplay
         public System.Windows.Forms.Label PlayerAPunishLabel;
         public System.Windows.Forms.Label PlayerBPunishLabel;
         public System.Windows.Forms.Label HoldTimeLabel;
-        public System.Windows.Forms.Label PlayerA5Caption;
-        public System.Windows.Forms.Label PlayerB5Caption;
         public System.Windows.Forms.Label PlayerB7Caption;
         public System.Windows.Forms.Label PlayerB10Caption;
         public System.Windows.Forms.Label PlayerA7Caption;
@@ -53,8 +49,6 @@ namespace UDisplay
             this.PlayerAShape = new System.Windows.Forms.GroupBox();
             this.PlayerBShape = new System.Windows.Forms.GroupBox();
             this.TimeLabel = new System.Windows.Forms.Label();
-            this.PlayerA5Label = new System.Windows.Forms.Label();
-            this.PlayerB5Label = new System.Windows.Forms.Label();
             this.PlayerB7Label = new System.Windows.Forms.Label();
             this.PlayerB10Label = new System.Windows.Forms.Label();
             this.PlayerA7Label = new System.Windows.Forms.Label();
@@ -62,8 +56,6 @@ namespace UDisplay
             this.PlayerAPunishLabel = new System.Windows.Forms.Label();
             this.PlayerBPunishLabel = new System.Windows.Forms.Label();
             this.HoldTimeLabel = new System.Windows.Forms.Label();
-            this.PlayerA5Caption = new System.Windows.Forms.Label();
-            this.PlayerB5Caption = new System.Windows.Forms.Label();
             this.PlayerB7Caption = new System.Windows.Forms.Label();
             this.PlayerB10Caption = new System.Windows.Forms.Label();
             this.PlayerA7Caption = new System.Windows.Forms.Label();
@@ -117,24 +109,6 @@ namespace UDisplay
             this.TimeLabel.TabIndex = 4;
             this.TimeLabel.Text = "0:00";
             this.TimeLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // PlayerA5Label
-            // 
-            this.PlayerA5Label.Location = new System.Drawing.Point(112, 248);
-            this.PlayerA5Label.Name = "PlayerA5Label";
-            this.PlayerA5Label.Size = new System.Drawing.Size(6, 13);
-            this.PlayerA5Label.TabIndex = 5;
-            this.PlayerA5Label.Text = "0";
-            this.PlayerA5Label.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // PlayerB5Label
-            // 
-            this.PlayerB5Label.Location = new System.Drawing.Point(408, 248);
-            this.PlayerB5Label.Name = "PlayerB5Label";
-            this.PlayerB5Label.Size = new System.Drawing.Size(6, 13);
-            this.PlayerB5Label.TabIndex = 6;
-            this.PlayerB5Label.Text = "0";
-            this.PlayerB5Label.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // PlayerB7Label
             // 
@@ -197,24 +171,6 @@ namespace UDisplay
             this.HoldTimeLabel.Size = new System.Drawing.Size(3, 13);
             this.HoldTimeLabel.TabIndex = 13;
             this.HoldTimeLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // PlayerA5Caption
-            // 
-            this.PlayerA5Caption.Location = new System.Drawing.Point(112, 264);
-            this.PlayerA5Caption.Name = "PlayerA5Caption";
-            this.PlayerA5Caption.Size = new System.Drawing.Size(25, 13);
-            this.PlayerA5Caption.TabIndex = 14;
-            this.PlayerA5Caption.Text = "Yuko";
-            this.PlayerA5Caption.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // PlayerB5Caption
-            // 
-            this.PlayerB5Caption.Location = new System.Drawing.Point(408, 264);
-            this.PlayerB5Caption.Name = "PlayerB5Caption";
-            this.PlayerB5Caption.Size = new System.Drawing.Size(25, 13);
-            this.PlayerB5Caption.TabIndex = 15;
-            this.PlayerB5Caption.Text = "Yuko";
-            this.PlayerB5Caption.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // PlayerB7Caption
             // 
@@ -308,8 +264,6 @@ namespace UDisplay
             this.Controls.Add(this.PlayerAShape);
             this.Controls.Add(this.PlayerBShape);
             this.Controls.Add(this.TimeLabel);
-            this.Controls.Add(this.PlayerA5Label);
-            this.Controls.Add(this.PlayerB5Label);
             this.Controls.Add(this.PlayerB7Label);
             this.Controls.Add(this.PlayerB10Label);
             this.Controls.Add(this.PlayerA7Label);
@@ -317,8 +271,6 @@ namespace UDisplay
             this.Controls.Add(this.PlayerAPunishLabel);
             this.Controls.Add(this.PlayerBPunishLabel);
             this.Controls.Add(this.HoldTimeLabel);
-            this.Controls.Add(this.PlayerA5Caption);
-            this.Controls.Add(this.PlayerB5Caption);
             this.Controls.Add(this.PlayerB7Caption);
             this.Controls.Add(this.PlayerB10Caption);
             this.Controls.Add(this.PlayerA7Caption);

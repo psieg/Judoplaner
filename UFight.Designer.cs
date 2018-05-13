@@ -5,8 +5,6 @@ namespace UFight
         public System.Windows.Forms.Label PlayerALabel;
         public System.Windows.Forms.Label PlayerBLabel;
         public System.Windows.Forms.Label TimeLabel;
-        public System.Windows.Forms.Label PlayerA5Label;
-        public System.Windows.Forms.Label PlayerB5Label;
         public System.Windows.Forms.Label PlayerB7Label;
         public System.Windows.Forms.Label PlayerB10Label;
         public System.Windows.Forms.Label PlayerA7Label;
@@ -17,9 +15,7 @@ namespace UFight
         public System.Windows.Forms.Button PlayerB10Button;
         public System.Windows.Forms.Button PauseButton;
         public System.Windows.Forms.Button PlayerA7Button;
-        public System.Windows.Forms.Button PlayerA5Button;
         public System.Windows.Forms.Button PlayerB7Button;
-        public System.Windows.Forms.Button PlayerB5Button;
         public System.Windows.Forms.Button PlayerAPunishButton;
         public System.Windows.Forms.Button PlayerBPunishButton;
         public System.Windows.Forms.Button PlayerA10Button;
@@ -51,8 +47,6 @@ namespace UFight
             this.PlayerALabel = new System.Windows.Forms.Label();
             this.PlayerBLabel = new System.Windows.Forms.Label();
             this.TimeLabel = new System.Windows.Forms.Label();
-            this.PlayerA5Label = new System.Windows.Forms.Label();
-            this.PlayerB5Label = new System.Windows.Forms.Label();
             this.PlayerB7Label = new System.Windows.Forms.Label();
             this.PlayerB10Label = new System.Windows.Forms.Label();
             this.PlayerA7Label = new System.Windows.Forms.Label();
@@ -63,9 +57,7 @@ namespace UFight
             this.PlayerB10Button = new System.Windows.Forms.Button();
             this.PauseButton = new System.Windows.Forms.Button();
             this.PlayerA7Button = new System.Windows.Forms.Button();
-            this.PlayerA5Button = new System.Windows.Forms.Button();
             this.PlayerB7Button = new System.Windows.Forms.Button();
-            this.PlayerB5Button = new System.Windows.Forms.Button();
             this.PlayerAPunishButton = new System.Windows.Forms.Button();
             this.PlayerBPunishButton = new System.Windows.Forms.Button();
             this.PlayerA10Button = new System.Windows.Forms.Button();
@@ -103,24 +95,6 @@ namespace UFight
             this.TimeLabel.TabIndex = 4;
             this.TimeLabel.Text = "0:00";
             this.TimeLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // PlayerA5Label
-            // 
-            this.PlayerA5Label.Location = new System.Drawing.Point(120, 256);
-            this.PlayerA5Label.Name = "PlayerA5Label";
-            this.PlayerA5Label.Size = new System.Drawing.Size(49, 13);
-            this.PlayerA5Label.TabIndex = 5;
-            this.PlayerA5Label.Text = "0";
-            this.PlayerA5Label.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // PlayerB5Label
-            // 
-            this.PlayerB5Label.Location = new System.Drawing.Point(416, 256);
-            this.PlayerB5Label.Name = "PlayerB5Label";
-            this.PlayerB5Label.Size = new System.Drawing.Size(49, 13);
-            this.PlayerB5Label.TabIndex = 6;
-            this.PlayerB5Label.Text = "0";
-            this.PlayerB5Label.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // PlayerB7Label
             // 
@@ -218,17 +192,6 @@ namespace UFight
             this.PlayerA7Button.UseVisualStyleBackColor = false;
             this.PlayerA7Button.Click += new System.EventHandler(this.PlayerA7ButtonClick);
             // 
-            // PlayerA5Button
-            // 
-            this.PlayerA5Button.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.PlayerA5Button.Location = new System.Drawing.Point(120, 272);
-            this.PlayerA5Button.Name = "PlayerA5Button";
-            this.PlayerA5Button.Size = new System.Drawing.Size(49, 17);
-            this.PlayerA5Button.TabIndex = 4;
-            this.PlayerA5Button.Text = "Yuko";
-            this.PlayerA5Button.UseVisualStyleBackColor = false;
-            this.PlayerA5Button.Click += new System.EventHandler(this.PlayerA5ButtonClick);
-            // 
             // PlayerB7Button
             // 
             this.PlayerB7Button.BackColor = System.Drawing.SystemColors.ButtonFace;
@@ -239,17 +202,6 @@ namespace UFight
             this.PlayerB7Button.Text = "Waza-ari";
             this.PlayerB7Button.UseVisualStyleBackColor = false;
             this.PlayerB7Button.Click += new System.EventHandler(this.PlayerB7ButtonClick);
-            // 
-            // PlayerB5Button
-            // 
-            this.PlayerB5Button.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.PlayerB5Button.Location = new System.Drawing.Point(416, 272);
-            this.PlayerB5Button.Name = "PlayerB5Button";
-            this.PlayerB5Button.Size = new System.Drawing.Size(49, 17);
-            this.PlayerB5Button.TabIndex = 8;
-            this.PlayerB5Button.Text = "Yuko";
-            this.PlayerB5Button.UseVisualStyleBackColor = false;
-            this.PlayerB5Button.Click += new System.EventHandler(this.PlayerB5ButtonClick);
             // 
             // PlayerAPunishButton
             // 
@@ -358,8 +310,6 @@ namespace UFight
             this.Controls.Add(this.PlayerAShape);
             this.Controls.Add(this.PlayerBShape);
             this.Controls.Add(this.TimeLabel);
-            this.Controls.Add(this.PlayerA5Label);
-            this.Controls.Add(this.PlayerB5Label);
             this.Controls.Add(this.PlayerB7Label);
             this.Controls.Add(this.PlayerB10Label);
             this.Controls.Add(this.PlayerA7Label);
@@ -370,9 +320,7 @@ namespace UFight
             this.Controls.Add(this.PlayerB10Button);
             this.Controls.Add(this.PauseButton);
             this.Controls.Add(this.PlayerA7Button);
-            this.Controls.Add(this.PlayerA5Button);
             this.Controls.Add(this.PlayerB7Button);
-            this.Controls.Add(this.PlayerB5Button);
             this.Controls.Add(this.PlayerAPunishButton);
             this.Controls.Add(this.PlayerBPunishButton);
             this.Controls.Add(this.PlayerA10Button);
