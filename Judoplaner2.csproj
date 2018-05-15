@@ -133,12 +133,7 @@
     <Compile Include="ULoad.Designer.cs">
       <DependentUpon>ULoad.cs</DependentUpon>
     </Compile>
-    <Compile Include="UPrint.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UPrint.Designer.cs">
-      <DependentUpon>UPrint.cs</DependentUpon>
-    </Compile>
+    <Compile Include="UPrint.cs" />
     <Compile Include="USettings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,9 +158,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ULoad.resx">
       <DependentUpon>ULoad.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UPrint.resx">
-      <DependentUpon>UPrint.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="USettings.resx">
       <DependentUpon>USettings.cs</DependentUpon>

@@ -522,47 +522,41 @@ namespace UGroup
         public void PrintGameButtonClick(System.Object Sender, System.EventArgs _e1)
         {
             Bitmap tmpbitmap;
-            Bitmap bm1;
-            Bitmap bm2;
-            Units.Print.PrintForm.ShowDialog(this);
             if (Units.Group.isDE)
             {
-                Units.Print.PrintForm.Print(Units.Group.GameDE.ToBitmap(), "Spielplan Doppel-KO", true, UPrint.PRINTSCALE.PRINTSCL_SCALE_X);
+                Units.Print.Printing.Print(this, Units.Group.GameDE.ToBitmap(20), "Spielplan Doppel-KO", true, UPrint.PRINTSCALE.PRINTSCL_SCALE_X);
             }
             else
             {
                 if (Units.Group.GameRRStore != null)
                 {
-                    tmpbitmap = Units.Group.GameRR.ToBitmap(Units.Group.GameRRStore);
-                    Units.Print.PrintForm.Print(tmpbitmap, "Spielplan Jeder gegen Jeden", false, UPrint.PRINTSCALE.PRINTSCL_GLUE);
+                    tmpbitmap = Units.Group.GameRR.ToBitmap(Units.Group.GameRRStore, 20);
+                    Units.Print.Printing.Print(this, tmpbitmap, "Spielplan Jeder gegen Jeden", false, UPrint.PRINTSCALE.PRINTSCL_GLUE);
                 }
                 else
                 {
-                    Units.Print.PrintForm.Print(Units.Group.GameRR.ToBitmap(), "Spielplan Jeder gegen Jeden", false, UPrint.PRINTSCALE.PRINTSCL_GLUE);
+                    Units.Print.Printing.Print(this, Units.Group.GameRR.ToBitmap(null, 20), "Spielplan Jeder gegen Jeden", false, UPrint.PRINTSCALE.PRINTSCL_GLUE);
                 }
             }
-            Units.Print.PrintForm.Hide();
         }
 
         public void PrintResultButtonClick(System.Object Sender, System.EventArgs _e1)
         {
-            Units.Print.PrintForm.ShowDialog(this);
             if (Units.Group.isDE)
             {
-                Units.Print.PrintForm.Print(Units.Group.GameDE.ToBitmapResult(Units.Group.Settings.Logo), "Spielplan Doppel-KO", true, UPrint.PRINTSCALE.PRINTSCL_SCALE_X);
+                Units.Print.Printing.Print(this, Units.Group.GameDE.ToBitmapResult(Units.Group.Settings.Logo, 20), "Spielplan Doppel-KO", true, UPrint.PRINTSCALE.PRINTSCL_SCALE_X);
             }
             else
             {
                 if (Units.Group.GameRRStore != null)
                 {
-                    Units.Print.PrintForm.Print(Units.Group.GameRR.ToBitmapResult(Units.Group.GameRRStore, Units.Group.Settings.Logo), "Spielplan Jeder gegen Jeden", false, UPrint.PRINTSCALE.PRINTSCL_GLUE);
+                    Units.Print.Printing.Print(this, Units.Group.GameRR.ToBitmapResult(Units.Group.GameRRStore, Units.Group.Settings.Logo, 20), "Spielplan Jeder gegen Jeden", false, UPrint.PRINTSCALE.PRINTSCL_GLUE);
                 }
                 else
                 {
-                    Units.Print.PrintForm.Print(Units.Group.GameRR.ToBitmapResult(null, Units.Group.Settings.Logo), "Spielplan Jeder gegen Jeden", false, UPrint.PRINTSCALE.PRINTSCL_GLUE);
+                    Units.Print.Printing.Print(this, Units.Group.GameRR.ToBitmapResult(null, Units.Group.Settings.Logo, 20), "Spielplan Jeder gegen Jeden", false, UPrint.PRINTSCALE.PRINTSCL_GLUE);
                 }
             }
-            Units.Print.PrintForm.Hide();
         }
 
         public void FormShow(object sender, EventArgs e)
