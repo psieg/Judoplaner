@@ -32,7 +32,7 @@ namespace Judoplaner2
             Units.Fight.FightForm = new TFightForm();
             Units.Settings.SettingsForm = new TSettingsForm();
             Units.Display.DisplayForm = new TDisplayForm();
-            Units.Print.PrintForm = new TPrintForm();
+            Units.Print.Printing = new TPrinting();
             // Application.Run;
             Units.Group.GroupForm.Visible = false;
             Application.Run(Units.Load.LoadForm);
