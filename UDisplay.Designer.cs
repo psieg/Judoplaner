@@ -4,8 +4,8 @@ namespace UDisplay
     {
         public System.Windows.Forms.Label PlayerALabel;
         public System.Windows.Forms.Label PlayerBLabel;
-        public System.Windows.Forms.GroupBox PlayerAShape;
-        public System.Windows.Forms.GroupBox PlayerBShape;
+        public System.Windows.Forms.Label PlayerAShape;
+        public System.Windows.Forms.Label PlayerBShape;
         public System.Windows.Forms.Label TimeLabel;
         public System.Windows.Forms.Label PlayerB7Label;
         public System.Windows.Forms.Label PlayerB10Label;
@@ -46,8 +46,8 @@ namespace UDisplay
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.PlayerALabel = new System.Windows.Forms.Label();
             this.PlayerBLabel = new System.Windows.Forms.Label();
-            this.PlayerAShape = new System.Windows.Forms.GroupBox();
-            this.PlayerBShape = new System.Windows.Forms.GroupBox();
+            this.PlayerAShape = new System.Windows.Forms.Label();
+            this.PlayerBShape = new System.Windows.Forms.Label();
             this.TimeLabel = new System.Windows.Forms.Label();
             this.PlayerB7Label = new System.Windows.Forms.Label();
             this.PlayerB10Label = new System.Windows.Forms.Label();
@@ -86,19 +86,19 @@ namespace UDisplay
             // 
             // PlayerAShape
             // 
+            this.PlayerAShape.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PlayerAShape.Location = new System.Drawing.Point(0, 16);
             this.PlayerAShape.Name = "PlayerAShape";
             this.PlayerAShape.Size = new System.Drawing.Size(217, 217);
             this.PlayerAShape.TabIndex = 2;
-            this.PlayerAShape.TabStop = false;
             // 
             // PlayerBShape
             // 
+            this.PlayerBShape.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PlayerBShape.Location = new System.Drawing.Point(296, 16);
             this.PlayerBShape.Name = "PlayerBShape";
             this.PlayerBShape.Size = new System.Drawing.Size(217, 217);
             this.PlayerBShape.TabIndex = 3;
-            this.PlayerBShape.TabStop = false;
             // 
             // TimeLabel
             // 

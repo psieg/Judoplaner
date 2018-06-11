@@ -66,8 +66,8 @@ namespace UFight
             this.GoButton = new System.Windows.Forms.Button();
             this.UndoButton = new System.Windows.Forms.Button();
             this.TimeTimer = new System.Windows.Forms.Timer(this.components);
-            this.PlayerAShape = new System.Windows.Forms.GroupBox();
-            this.PlayerBShape = new System.Windows.Forms.GroupBox();
+            this.PlayerAShape = new System.Windows.Forms.Label();
+            this.PlayerBShape = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // PlayerALabel
@@ -286,19 +286,19 @@ namespace UFight
             // 
             // PlayerAShape
             // 
+            this.PlayerAShape.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PlayerAShape.Location = new System.Drawing.Point(8, 24);
             this.PlayerAShape.Name = "PlayerAShape";
             this.PlayerAShape.Size = new System.Drawing.Size(217, 217);
             this.PlayerAShape.TabIndex = 2;
-            this.PlayerAShape.TabStop = false;
             // 
             // PlayerBShape
             // 
+            this.PlayerBShape.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PlayerBShape.Location = new System.Drawing.Point(304, 24);
             this.PlayerBShape.Name = "PlayerBShape";
             this.PlayerBShape.Size = new System.Drawing.Size(217, 217);
             this.PlayerBShape.TabIndex = 3;
-            this.PlayerBShape.TabStop = false;
             // 
             // TFightForm
             // 
@@ -345,8 +345,8 @@ namespace UFight
 #endregion
 
         private System.ComponentModel.IContainer components;
-        public System.Windows.Forms.GroupBox PlayerAShape;
-        public System.Windows.Forms.GroupBox PlayerBShape;
+        public System.Windows.Forms.Label PlayerAShape;
+        public System.Windows.Forms.Label PlayerBShape;
 
     }
 }
