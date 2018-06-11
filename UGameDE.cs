@@ -312,7 +312,7 @@ namespace UGameDE
             }
             result = result + Units.Class.SEP_GAME;
             // LevelMain,LevelLose,LevelSteps,LenMain,LenLose,CurrentMatch,HandlingMain,TimeStarted,ShortLoseRound
-            result = result + (LevelMain).ToString() + Units.Class.SEP_LIST + (LevelLose).ToString() + Units.Class.SEP_LIST + (LevelSteps).ToString() + Units.Class.SEP_LIST + (LenMain).ToString() + Units.Class.SEP_LIST + (LenLose).ToString() + Units.Class.SEP_LIST + (CurrentMatch).ToString() + Units.Class.SEP_LIST + UHelpers.UHelpers.BoolToStr(HandlingMain) + Units.Class.SEP_LIST + (TimeStarted).ToString() + Units.Class.SEP_LIST + UHelpers.UHelpers.BoolToStr(ShortLoseRound) + Units.Class.SEP_GAME;
+            result = result + (LevelMain).ToString() + Units.Class.SEP_LIST + (LevelLose).ToString() + Units.Class.SEP_LIST + (LevelSteps).ToString() + Units.Class.SEP_LIST + (LenMain).ToString() + Units.Class.SEP_LIST + (LenLose).ToString() + Units.Class.SEP_LIST + (CurrentMatch).ToString() + Units.Class.SEP_LIST + UHelpers.UHelpers.BoolToStr(HandlingMain) + Units.Class.SEP_LIST + (TimeStarted).ToString("o") + Units.Class.SEP_LIST + UHelpers.UHelpers.BoolToStr(ShortLoseRound) + Units.Class.SEP_GAME;
             // MainRound
             for (i = 0; i < LenMain; i++)
             {

@@ -178,8 +178,7 @@ namespace UGameRR
             }
             result = result + Units.Class.SEP_GAME;
             // TimeStarted
-            result = result + (TimeStarted).ToString();
-            // TODO: unix?
+            result = result + (TimeStarted).ToString("o");
             // not required: CurrentMatch, CurrentA, CurrentB, Settings
 
             return result;
