@@ -24,6 +24,14 @@ namespace ULoad
                 Units.Display.DisplayForm.Width = Screen.AllScreens[1].Bounds.Width;
                 Units.Display.DisplayForm.Height = Screen.AllScreens[1].Bounds.Height;
             }
+            else
+            {
+                Units.Display.DisplayForm.Left = 40;
+                Units.Display.DisplayForm.Top = 40;
+                Units.Display.DisplayForm.Width = 1600;
+                Units.Display.DisplayForm.Height = 900;
+                Units.Display.DisplayForm.Show();
+            }
             this.Hide();
             this.Timer1.Enabled = false;
         }
