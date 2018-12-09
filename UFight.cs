@@ -455,10 +455,16 @@ namespace UFight
 
         public void Finish(int PlayerXPoints, bool PlayerA)
         {
-            // TODO: CONFIRM
-            if (false)
+            PauseButtonClick(null, null);
+            bool undo = MessageBox.Show((PlayerA ? (Units.Fight.BacklinkSettings.UseRedForPlayerA ? "Rot" : "Blau") : "Weiß") + " hat gewonnen.\n" +
+            "Abbrechen für rückgängig.",
+            "Kampfende",
+            System.Windows.Forms.MessageBoxButtons.OK | System.Windows.Forms.MessageBoxButtons.OKCancel,
+            System.Windows.Forms.MessageBoxIcon.Exclamation) != System.Windows.Forms.DialogResult.OK;
+
+            if (undo)
             {
-                Restore();
+                UndoButtonClick(null, null);
             }
             else
             {
