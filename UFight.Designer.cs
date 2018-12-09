@@ -305,6 +305,7 @@ namespace UFight
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(575, 329);
+            this.ControlBox = false;
             this.Controls.Add(this.PlayerALabel);
             this.Controls.Add(this.PlayerBLabel);
             this.Controls.Add(this.PlayerAShape);
