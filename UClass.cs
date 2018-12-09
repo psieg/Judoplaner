@@ -240,7 +240,7 @@ namespace Units
     public class Class
     {
         public const string APPNAME = "Judoplaner";
-        public const string VERSION = "0.6";
+        public const string VERSION = "0.7";
         public const string PRINTMARK = APPNAME + " " + VERSION;
         public const string FILEEXT = ".jpgame";
         public const string LOGOFILE = "logo";
