@@ -490,7 +490,6 @@ namespace UGroup
         // Note: the original parameters are Object Sender, ref TCloseAction Action
         public void FormClose(object sender, FormClosedEventArgs e)
         {
-            File.Delete(Units.Class.BACKUPFILE + Units.Class.FILEEXT);
             Application.Exit();
         }
 
@@ -563,7 +562,8 @@ namespace UGroup
         {
             if (Units.Group.TryRestore && RestoreBackup())
             {
-                MessageBox.Show(("Es wurde ein Backup-Abbild gefunden und versucht, das Spiel wiederherzustellen." + (char)(13) + "Bitte nimm dir die Zeit, mir zu berichten, wo und wann (und warum) das Programm abgestürzt ist." as string), ("Absturz" as string), System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Exclamation);
+                MessageBox.Show("Der Stand des Tunriers wurde aus einem Abbild wiederhergestellt.\n" +
+                "Wenn dies wegen eins Absturzes ist, schick' mir bitte das Abbild.", "Stand geladen", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Information);
             }
             Units.Group.TryRestore = false;
         }
@@ -586,9 +586,21 @@ namespace UGroup
                     ask = true;
                 }
             }
-            if (ask && (MessageBox.Show(("Wirklich beenden? Im Moment ist ein Spiel aktiv!" as string), ("Beenden" as string), System.Windows.Forms.MessageBoxButtons.OKCancel, System.Windows.Forms.MessageBoxIcon.Exclamation ) == System.Windows.Forms.DialogResult.Cancel))
+            if (ask)
             {
-                e.Cancel = true;
+                DialogResult r = MessageBox.Show("Aktuellen Stand speichern? Er wird beim nächsten Start automatisch geladen.", "Beenden", System.Windows.Forms.MessageBoxButtons.YesNoCancel, System.Windows.Forms.MessageBoxIcon.Exclamation);
+                if (r == DialogResult.Yes)
+                {
+                    // BackupRunning() has already happened.
+                }
+                else if (r == DialogResult.No)
+                {
+                    File.Delete(Units.Class.BACKUPFILE + Units.Class.FILEEXT);
+                }
+                else
+                {
+                    e.Cancel = true;
+                }                
             }
         }
     } // end TGroupForm
