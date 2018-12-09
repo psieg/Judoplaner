@@ -163,7 +163,7 @@
       <DependentUpon>USettings.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
-    <None Include="MachineStd.ttf" />
+    <None Include="Resources\MachineStd.ttf" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
@@ -178,10 +178,13 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="logo.bmp" />
+    <None Include="Resources\logo.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="shidosha-white.png" />
+    <None Include="Resources\shidosha_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shidosha_white.png" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

@@ -41,6 +41,7 @@ namespace UPrint
             Brush brush = new SolidBrush(Color.Gray);
             // 11 is text height
             e.Graphics.DrawString(Units.Class.PRINTMARK, font, brush, 50, e.PageBounds.Bottom - 50 - 11);
+            e.Graphics.DrawImage(Judoplaner2.Properties.Resources.shidosha_black, new Rectangle(e.PageBounds.Left + 50, e.PageBounds.Bottom - 100 - 50 - 11 - 11, 100, 100));
         }
 
         public bool Print(IWin32Window owner, Bitmap b, string name, bool LandScape, PRINTSCALE PrintScaling)
@@ -57,7 +58,14 @@ namespace UPrint
             printDialog1.Document = pd;
             DialogResult result = printDialog1.ShowDialog();
 
-            pd.Print();
+            try
+            {
+                pd.Print();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(Units.Group.GroupForm, "Fehler beim Drucken: " + e.Message, "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
             bm = null;
 
