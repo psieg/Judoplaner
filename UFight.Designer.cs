@@ -282,6 +282,7 @@ namespace UFight
             // 
             // TimeTimer
             // 
+            this.TimeTimer.Interval = 1000;
             this.TimeTimer.Tick += new System.EventHandler(this.TimeTimerTimer);
             // 
             // PlayerAShape
