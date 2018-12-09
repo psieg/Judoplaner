@@ -343,6 +343,7 @@ namespace USettings
             this.Label4.Size = new System.Drawing.Size(348, 13);
             this.Label4.TabIndex = 2;
             this.Label4.Text = "Vereinslogo: logo.bmp ins Verzeichnis des Programms kopieren. Status:";
+            this.Label4.Visible = false;
             // 
             // LogoLabel
             // 
@@ -351,6 +352,7 @@ namespace USettings
             this.LogoLabel.Size = new System.Drawing.Size(96, 13);
             this.LogoLabel.TabIndex = 3;
             this.LogoLabel.Text = "Kein Logo gefunden";
+            this.LogoLabel.Visible = false;
             // 
             // ReloadLogoButton
             // 
@@ -361,6 +363,7 @@ namespace USettings
             this.ReloadLogoButton.TabIndex = 4;
             this.ReloadLogoButton.Text = "neu laden";
             this.ReloadLogoButton.UseVisualStyleBackColor = false;
+            this.ReloadLogoButton.Visible = false;
             this.ReloadLogoButton.Click += new System.EventHandler(this.ReloadLogoButtonClick);
             // 
             // ExtendedBox
