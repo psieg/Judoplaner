@@ -140,13 +140,13 @@ namespace UHelpers
                 {
                     result = new List<List<int>>(2);
                     result.Add(new List<int>(4));
-                    result[0][0] = 0;
-                    result[0][1] = 1;
-                    result[0][2] = 2;
-                    result[0][3] = 3;
+                    result[0].Add(0);
+                    result[0].Add(1);
+                    result[0].Add(2);
+                    result[0].Add(3);
                     result.Add(new List<int>(2));
-                    result[1][0] = 1;
-                    result[1][1] = 0;
+                    result[1].Add(1);
+                    result[1].Add(0);
                 }
             }
             return result;

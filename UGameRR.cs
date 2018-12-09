@@ -107,7 +107,7 @@ namespace UGameRR
             }
             // TimeGrid
             b = UHelpers.UHelpers.Explode(a[3], Units.Class.SEP_LIST);
-            PointsGrid = new int[nPlayers, nPlayers];
+            TimeGrid = new int[nPlayers, nPlayers];
             for (i = 0; i < nPlayers; i ++ )
             {
                 for (j = 0; j < nPlayers; j ++ )
