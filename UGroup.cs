@@ -252,7 +252,7 @@ namespace UGroup
                         }
                         else
                         {
-                            Units.Fight.FightForm.PlayerAShape.BackColor = System.Drawing.Color.Blue;
+                            Units.Fight.FightForm.PlayerAShape.BackColor = System.Drawing.Color.FromArgb(0,137,239);
                         }
                     }
                     else if (Units.Group.GameRR.Settings.UseRedForPlayerA)
@@ -261,7 +261,7 @@ namespace UGroup
                     }
                     else
                     {
-                        Units.Fight.FightForm.PlayerAShape.BackColor = System.Drawing.Color.Blue;
+                        Units.Fight.FightForm.PlayerAShape.BackColor = System.Drawing.Color.FromArgb(0, 137, 239);
                     }
                     Units.Display.DisplayForm.PlayerAShape.BackColor = Units.Fight.FightForm.PlayerAShape.BackColor;
                     Units.Fight.BacklinkForm = Units.Group.GroupForm;

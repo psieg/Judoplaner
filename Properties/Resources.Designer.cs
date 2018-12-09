@@ -79,5 +79,15 @@ namespace Judoplaner2.Properties {
                 return ((byte[])(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shidosha_white {
+            get {
+                object obj = ResourceManager.GetObject("shidosha-white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

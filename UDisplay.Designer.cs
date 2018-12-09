@@ -57,11 +57,13 @@ namespace UDisplay
             this.PlayerAShape = new System.Windows.Forms.TableLayoutPanel();
             this.MainLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.PlayerBShape = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BottomBarLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.ProgressBar = new Judoplaner2.ProgressBar();
             this.PlayerAShape.SuspendLayout();
             this.MainLayoutPanel.SuspendLayout();
             this.PlayerBShape.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.BottomBarLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -161,9 +163,9 @@ namespace UDisplay
             this.TimeLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TimeLabel.Font = new System.Drawing.Font("Digital-7 Mono", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TimeLabel.ForeColor = System.Drawing.Color.Red;
-            this.TimeLabel.Location = new System.Drawing.Point(217, 111);
+            this.TimeLabel.Location = new System.Drawing.Point(217, 56);
             this.TimeLabel.Name = "TimeLabel";
-            this.TimeLabel.Size = new System.Drawing.Size(162, 56);
+            this.TimeLabel.Size = new System.Drawing.Size(162, 85);
             this.TimeLabel.TabIndex = 4;
             this.TimeLabel.Text = "0:00";
             this.TimeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -175,7 +177,7 @@ namespace UDisplay
             this.MainLayoutPanel.SetColumnSpan(this.HoldTimeLabel, 2);
             this.HoldTimeLabel.Dock = System.Windows.Forms.DockStyle.Top;
             this.HoldTimeLabel.Font = new System.Drawing.Font("Digital-7 Mono", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HoldTimeLabel.Location = new System.Drawing.Point(259, 251);
+            this.HoldTimeLabel.Location = new System.Drawing.Point(259, 141);
             this.HoldTimeLabel.Name = "HoldTimeLabel";
             this.HoldTimeLabel.Size = new System.Drawing.Size(78, 38);
             this.HoldTimeLabel.TabIndex = 13;
@@ -299,7 +301,7 @@ namespace UDisplay
             // 
             // PlayerAShape
             // 
-            this.PlayerAShape.BackColor = System.Drawing.Color.Blue;
+            this.PlayerAShape.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(239)))));
             this.PlayerAShape.ColumnCount = 4;
             this.PlayerAShape.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.PlayerAShape.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -332,24 +334,25 @@ namespace UDisplay
             // 
             this.MainLayoutPanel.ColumnCount = 6;
             this.MainLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.71429F));
-            this.MainLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.142857F));
-            this.MainLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.142857F));
-            this.MainLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.142857F));
-            this.MainLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.142857F));
+            this.MainLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.142856F));
+            this.MainLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.142856F));
+            this.MainLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.142856F));
+            this.MainLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.142856F));
             this.MainLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.71429F));
             this.MainLayoutPanel.Controls.Add(this.PlayerAShape, 0, 0);
             this.MainLayoutPanel.Controls.Add(this.TimeLabel, 1, 1);
-            this.MainLayoutPanel.Controls.Add(this.HoldTimeLabel, 2, 3);
+            this.MainLayoutPanel.Controls.Add(this.HoldTimeLabel, 2, 2);
             this.MainLayoutPanel.Controls.Add(this.PlayerBShape, 5, 0);
+            this.MainLayoutPanel.Controls.Add(this.pictureBox1, 1, 3);
             this.MainLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainLayoutPanel.Location = new System.Drawing.Point(0, 0);
             this.MainLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
             this.MainLayoutPanel.Name = "MainLayoutPanel";
             this.MainLayoutPanel.RowCount = 4;
-            this.MainLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.MainLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.MainLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.MainLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.MainLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.95139F));
+            this.MainLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.42201F));
+            this.MainLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.95139F));
+            this.MainLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.67521F));
             this.MainLayoutPanel.Size = new System.Drawing.Size(600, 336);
             this.MainLayoutPanel.TabIndex = 28;
             // 
@@ -383,6 +386,18 @@ namespace UDisplay
             this.PlayerBShape.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.PlayerBShape.Size = new System.Drawing.Size(218, 336);
             this.PlayerBShape.TabIndex = 15;
+            // 
+            // pictureBox1
+            // 
+            this.MainLayoutPanel.SetColumnSpan(this.pictureBox1, 4);
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::Judoplaner2.Properties.Resources.shidosha_white;
+            this.pictureBox1.Location = new System.Drawing.Point(217, 200);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(162, 133);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
             // 
             // BottomBarLayoutPanel
             // 
@@ -431,6 +446,7 @@ namespace UDisplay
             this.MainLayoutPanel.PerformLayout();
             this.PlayerBShape.ResumeLayout(false);
             this.PlayerBShape.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.BottomBarLayoutPanel.ResumeLayout(false);
             this.BottomBarLayoutPanel.PerformLayout();
             this.ResumeLayout(false);
@@ -451,6 +467,7 @@ namespace UDisplay
         private System.Windows.Forms.TableLayoutPanel MainLayoutPanel;
         private System.Windows.Forms.TableLayoutPanel BottomBarLayoutPanel;
         private System.Windows.Forms.TableLayoutPanel PlayerBShape;
+        private System.Windows.Forms.PictureBox pictureBox1;
 
     }
 }
