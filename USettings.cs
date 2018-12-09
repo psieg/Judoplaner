@@ -13,7 +13,7 @@ namespace USettings
 
         public void FormCreate(System.Object Sender, System.EventArgs _e1)
         {
-            Units.Settings.IniFileName = Path.GetDirectoryName(System.Environment.GetCommandLineArgs()[0]) + Units.Class.INIFILE + ".ini";
+            Units.Settings.IniFileName = Path.GetDirectoryName(System.Environment.GetCommandLineArgs()[0]) + "\\" + Units.Class.INIFILE + ".ini";
         }
 
         public void OKButtonClick(System.Object Sender, System.EventArgs _e1)
