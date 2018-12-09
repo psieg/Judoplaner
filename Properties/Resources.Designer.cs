@@ -69,5 +69,15 @@ namespace Judoplaner2.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] MachineStd {
+            get {
+                object obj = ResourceManager.GetObject("MachineStd", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }
