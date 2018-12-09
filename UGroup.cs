@@ -277,8 +277,6 @@ namespace UGroup
                         Units.Fight.BacklinkGameDE = null;
                         Units.Fight.BacklinkGameRR = Units.Group.GameRR;
                     }
-                    Units.Group.GroupForm.Enabled = false;
-                    Units.Fight.FightForm.ShowDialog(this);
                     if (Units.Group.isDE)
                     {
                         tmpmatch = Units.Group.GameDE.GetPreparingMatch();
@@ -297,6 +295,8 @@ namespace UGroup
                         NextStepButton.Text = "Ergebnisliste";
                     }
                     Units.Display.DisplayForm.PrepareLabel.Text = PrepareLabel.Text;
+                    Units.Group.GroupForm.Enabled = false;
+                    Units.Fight.FightForm.ShowDialog(this);
                 }
                 else
                 {
@@ -476,7 +476,7 @@ namespace UGroup
         {
             int i;
             i = PlayerBox.SelectedIndex;
-            if (i ==  -1)
+            if (i == -1)
             {
                 MessageBox.Show(("Bitte wählen Sie einen Kämpfer zum Löschen aus." as string), ("Fehler" as string), System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Exclamation);
             }

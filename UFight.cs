@@ -438,6 +438,7 @@ namespace UFight
             {
                 Units.Display.DisplayForm.TimeLabel.Text = TimeLabel.Text;
                 Units.Display.DisplayForm.HoldTimeLabel.Text = HoldTimeLabel.Text;
+                Units.Display.DisplayForm.HoldTimeLabel.Visible = HoldTimeLabel.Text != "";
                 Units.Display.DisplayForm.PlayerA7Label.Text = PlayerA7Label.Text;
                 Units.Display.DisplayForm.PlayerA10Label.Text = PlayerA10Label.Text;
                 Units.Display.DisplayForm.PlayerAPunishLabel.Text = PlayerAPunishLabel.Text;

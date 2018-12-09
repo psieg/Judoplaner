@@ -80,7 +80,7 @@ namespace UFight
             // 
             // PlayerBLabel
             // 
-            this.PlayerBLabel.Location = new System.Drawing.Point(304, 8);
+            this.PlayerBLabel.Location = new System.Drawing.Point(351, 8);
             this.PlayerBLabel.Name = "PlayerBLabel";
             this.PlayerBLabel.Size = new System.Drawing.Size(217, 13);
             this.PlayerBLabel.TabIndex = 1;
@@ -91,14 +91,14 @@ namespace UFight
             this.TimeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.TimeLabel.Location = new System.Drawing.Point(232, 112);
             this.TimeLabel.Name = "TimeLabel";
-            this.TimeLabel.Size = new System.Drawing.Size(65, 25);
+            this.TimeLabel.Size = new System.Drawing.Size(113, 25);
             this.TimeLabel.TabIndex = 4;
             this.TimeLabel.Text = "0:00";
-            this.TimeLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.TimeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // PlayerB7Label
             // 
-            this.PlayerB7Label.Location = new System.Drawing.Point(360, 256);
+            this.PlayerB7Label.Location = new System.Drawing.Point(438, 256);
             this.PlayerB7Label.Name = "PlayerB7Label";
             this.PlayerB7Label.Size = new System.Drawing.Size(49, 13);
             this.PlayerB7Label.TabIndex = 7;
@@ -107,7 +107,7 @@ namespace UFight
             // 
             // PlayerB10Label
             // 
-            this.PlayerB10Label.Location = new System.Drawing.Point(304, 256);
+            this.PlayerB10Label.Location = new System.Drawing.Point(357, 256);
             this.PlayerB10Label.Name = "PlayerB10Label";
             this.PlayerB10Label.Size = new System.Drawing.Size(49, 13);
             this.PlayerB10Label.TabIndex = 8;
@@ -116,7 +116,7 @@ namespace UFight
             // 
             // PlayerA7Label
             // 
-            this.PlayerA7Label.Location = new System.Drawing.Point(64, 256);
+            this.PlayerA7Label.Location = new System.Drawing.Point(115, 256);
             this.PlayerA7Label.Name = "PlayerA7Label";
             this.PlayerA7Label.Size = new System.Drawing.Size(49, 13);
             this.PlayerA7Label.TabIndex = 9;
@@ -125,7 +125,7 @@ namespace UFight
             // 
             // PlayerA10Label
             // 
-            this.PlayerA10Label.Location = new System.Drawing.Point(8, 256);
+            this.PlayerA10Label.Location = new System.Drawing.Point(34, 256);
             this.PlayerA10Label.Name = "PlayerA10Label";
             this.PlayerA10Label.Size = new System.Drawing.Size(49, 13);
             this.PlayerA10Label.TabIndex = 10;
@@ -134,7 +134,7 @@ namespace UFight
             // 
             // PlayerAPunishLabel
             // 
-            this.PlayerAPunishLabel.Location = new System.Drawing.Point(176, 256);
+            this.PlayerAPunishLabel.Location = new System.Drawing.Point(196, 256);
             this.PlayerAPunishLabel.Name = "PlayerAPunishLabel";
             this.PlayerAPunishLabel.Size = new System.Drawing.Size(49, 13);
             this.PlayerAPunishLabel.TabIndex = 11;
@@ -143,7 +143,7 @@ namespace UFight
             // 
             // PlayerBPunishLabel
             // 
-            this.PlayerBPunishLabel.Location = new System.Drawing.Point(472, 256);
+            this.PlayerBPunishLabel.Location = new System.Drawing.Point(520, 256);
             this.PlayerBPunishLabel.Name = "PlayerBPunishLabel";
             this.PlayerBPunishLabel.Size = new System.Drawing.Size(48, 13);
             this.PlayerBPunishLabel.TabIndex = 12;
@@ -154,16 +154,16 @@ namespace UFight
             // 
             this.HoldTimeLabel.Location = new System.Drawing.Point(232, 168);
             this.HoldTimeLabel.Name = "HoldTimeLabel";
-            this.HoldTimeLabel.Size = new System.Drawing.Size(65, 13);
+            this.HoldTimeLabel.Size = new System.Drawing.Size(113, 13);
             this.HoldTimeLabel.TabIndex = 13;
-            this.HoldTimeLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.HoldTimeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // PlayerB10Button
             // 
             this.PlayerB10Button.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.PlayerB10Button.Location = new System.Drawing.Point(304, 272);
+            this.PlayerB10Button.Location = new System.Drawing.Point(331, 272);
             this.PlayerB10Button.Name = "PlayerB10Button";
-            this.PlayerB10Button.Size = new System.Drawing.Size(49, 17);
+            this.PlayerB10Button.Size = new System.Drawing.Size(75, 23);
             this.PlayerB10Button.TabIndex = 6;
             this.PlayerB10Button.Text = "Ippon";
             this.PlayerB10Button.UseVisualStyleBackColor = false;
@@ -172,9 +172,9 @@ namespace UFight
             // PauseButton
             // 
             this.PauseButton.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.PauseButton.Location = new System.Drawing.Point(232, 256);
+            this.PauseButton.Location = new System.Drawing.Point(251, 262);
             this.PauseButton.Name = "PauseButton";
-            this.PauseButton.Size = new System.Drawing.Size(65, 33);
+            this.PauseButton.Size = new System.Drawing.Size(74, 33);
             this.PauseButton.TabIndex = 1;
             this.PauseButton.Text = "Mat(t)e";
             this.PauseButton.UseVisualStyleBackColor = false;
@@ -184,9 +184,9 @@ namespace UFight
             // PlayerA7Button
             // 
             this.PlayerA7Button.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.PlayerA7Button.Location = new System.Drawing.Point(64, 272);
+            this.PlayerA7Button.Location = new System.Drawing.Point(89, 272);
             this.PlayerA7Button.Name = "PlayerA7Button";
-            this.PlayerA7Button.Size = new System.Drawing.Size(49, 17);
+            this.PlayerA7Button.Size = new System.Drawing.Size(75, 23);
             this.PlayerA7Button.TabIndex = 3;
             this.PlayerA7Button.Text = "Waza-ari";
             this.PlayerA7Button.UseVisualStyleBackColor = false;
@@ -195,9 +195,9 @@ namespace UFight
             // PlayerB7Button
             // 
             this.PlayerB7Button.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.PlayerB7Button.Location = new System.Drawing.Point(360, 272);
+            this.PlayerB7Button.Location = new System.Drawing.Point(412, 272);
             this.PlayerB7Button.Name = "PlayerB7Button";
-            this.PlayerB7Button.Size = new System.Drawing.Size(49, 17);
+            this.PlayerB7Button.Size = new System.Drawing.Size(75, 23);
             this.PlayerB7Button.TabIndex = 7;
             this.PlayerB7Button.Text = "Waza-ari";
             this.PlayerB7Button.UseVisualStyleBackColor = false;
@@ -206,9 +206,9 @@ namespace UFight
             // PlayerAPunishButton
             // 
             this.PlayerAPunishButton.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.PlayerAPunishButton.Location = new System.Drawing.Point(176, 272);
+            this.PlayerAPunishButton.Location = new System.Drawing.Point(170, 272);
             this.PlayerAPunishButton.Name = "PlayerAPunishButton";
-            this.PlayerAPunishButton.Size = new System.Drawing.Size(49, 17);
+            this.PlayerAPunishButton.Size = new System.Drawing.Size(75, 23);
             this.PlayerAPunishButton.TabIndex = 5;
             this.PlayerAPunishButton.Text = "Shido";
             this.PlayerAPunishButton.UseVisualStyleBackColor = false;
@@ -217,9 +217,9 @@ namespace UFight
             // PlayerBPunishButton
             // 
             this.PlayerBPunishButton.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.PlayerBPunishButton.Location = new System.Drawing.Point(472, 272);
+            this.PlayerBPunishButton.Location = new System.Drawing.Point(493, 272);
             this.PlayerBPunishButton.Name = "PlayerBPunishButton";
-            this.PlayerBPunishButton.Size = new System.Drawing.Size(49, 17);
+            this.PlayerBPunishButton.Size = new System.Drawing.Size(75, 23);
             this.PlayerBPunishButton.TabIndex = 9;
             this.PlayerBPunishButton.Text = "Shido";
             this.PlayerBPunishButton.UseVisualStyleBackColor = false;
@@ -230,7 +230,7 @@ namespace UFight
             this.PlayerA10Button.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.PlayerA10Button.Location = new System.Drawing.Point(8, 272);
             this.PlayerA10Button.Name = "PlayerA10Button";
-            this.PlayerA10Button.Size = new System.Drawing.Size(49, 17);
+            this.PlayerA10Button.Size = new System.Drawing.Size(75, 23);
             this.PlayerA10Button.TabIndex = 2;
             this.PlayerA10Button.Text = "Ippon";
             this.PlayerA10Button.UseVisualStyleBackColor = false;
@@ -239,9 +239,9 @@ namespace UFight
             // PlayerBHoldButton
             // 
             this.PlayerBHoldButton.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.PlayerBHoldButton.Location = new System.Drawing.Point(304, 296);
+            this.PlayerBHoldButton.Location = new System.Drawing.Point(331, 301);
             this.PlayerBHoldButton.Name = "PlayerBHoldButton";
-            this.PlayerBHoldButton.Size = new System.Drawing.Size(217, 17);
+            this.PlayerBHoldButton.Size = new System.Drawing.Size(237, 23);
             this.PlayerBHoldButton.TabIndex = 11;
             this.PlayerBHoldButton.Text = "Osae-komi";
             this.PlayerBHoldButton.UseVisualStyleBackColor = false;
@@ -250,9 +250,9 @@ namespace UFight
             // PlayerAHoldButton
             // 
             this.PlayerAHoldButton.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.PlayerAHoldButton.Location = new System.Drawing.Point(8, 296);
+            this.PlayerAHoldButton.Location = new System.Drawing.Point(8, 301);
             this.PlayerAHoldButton.Name = "PlayerAHoldButton";
-            this.PlayerAHoldButton.Size = new System.Drawing.Size(217, 17);
+            this.PlayerAHoldButton.Size = new System.Drawing.Size(237, 23);
             this.PlayerAHoldButton.TabIndex = 10;
             this.PlayerAHoldButton.Text = "Osae-komi";
             this.PlayerAHoldButton.UseVisualStyleBackColor = false;
@@ -261,9 +261,9 @@ namespace UFight
             // GoButton
             // 
             this.GoButton.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.GoButton.Location = new System.Drawing.Point(232, 256);
+            this.GoButton.Location = new System.Drawing.Point(251, 262);
             this.GoButton.Name = "GoButton";
-            this.GoButton.Size = new System.Drawing.Size(65, 33);
+            this.GoButton.Size = new System.Drawing.Size(74, 33);
             this.GoButton.TabIndex = 0;
             this.GoButton.Text = "Hajime";
             this.GoButton.UseVisualStyleBackColor = false;
@@ -272,9 +272,9 @@ namespace UFight
             // UndoButton
             // 
             this.UndoButton.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.UndoButton.Location = new System.Drawing.Point(232, 296);
+            this.UndoButton.Location = new System.Drawing.Point(251, 301);
             this.UndoButton.Name = "UndoButton";
-            this.UndoButton.Size = new System.Drawing.Size(65, 17);
+            this.UndoButton.Size = new System.Drawing.Size(74, 23);
             this.UndoButton.TabIndex = 12;
             this.UndoButton.Text = "rückgängig";
             this.UndoButton.UseVisualStyleBackColor = false;
@@ -295,7 +295,7 @@ namespace UFight
             // PlayerBShape
             // 
             this.PlayerBShape.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PlayerBShape.Location = new System.Drawing.Point(304, 24);
+            this.PlayerBShape.Location = new System.Drawing.Point(351, 24);
             this.PlayerBShape.Name = "PlayerBShape";
             this.PlayerBShape.Size = new System.Drawing.Size(217, 217);
             this.PlayerBShape.TabIndex = 3;
@@ -304,7 +304,7 @@ namespace UFight
             // 
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(529, 320);
+            this.ClientSize = new System.Drawing.Size(575, 329);
             this.Controls.Add(this.PlayerALabel);
             this.Controls.Add(this.PlayerBLabel);
             this.Controls.Add(this.PlayerAShape);
